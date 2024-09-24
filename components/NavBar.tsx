@@ -14,17 +14,30 @@ const NavBar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6">
-          <Link href="/programs" className="text-base font-medium text-gray-800 hover:bg-purple-500 hover:text-white transition-colors duration-200 px-3 py-1 rounded-lg">
+          <Link href="./Programs.tsx" className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
               Programs            
           </Link>
-          <Link href="/enterprise"
-             className="text-base font-medium text-gray-800 hover:bg-purple-500 hover:text-white transition-colors duration-200 px-3 py-1 rounded-lg">
-              Enterprise
+          <Link href="./WhyChooseUs.tsx" className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+              BrightMind's Industry Edge            
+          </Link>
+          <Link href="./EnterprisePartnerships.tsx"
+             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+              Industry Collboration
             
           </Link>
-          <Link href="/pricing"
-             className="text-base font-medium text-gray-800 hover:bg-purple-500 hover:text-white transition-colors duration-200 px-3 py-1 rounded-lg">
+          {/*<Link href="/pricing"
+             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
               Pricing
+            
+          </Link>*/}
+          <Link href="/placement"
+             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+              Hire from Us
+            
+          </Link>
+          <Link href="/candidateassist"
+             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+              Candidate Assistance
             
           </Link>
         </div>
@@ -32,7 +45,7 @@ const NavBar: React.FC = () => {
         {/* Sign In */}
         <div className="flex items-center gap-4">
           <Link href="/sign-in"
-             className="text-base font-medium text-gray-800 hover:bg-purple-500 hover:text-white transition-colors duration-200 px-3 py-1 rounded-lg">
+             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
               Sign In
             
           </Link>

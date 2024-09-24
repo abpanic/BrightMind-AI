@@ -1,56 +1,109 @@
-import React from 'react'
-import { IoIosArrowForward } from 'react-icons/io'
-import Image from 'next/image'
+import React, { useState } from 'react';
+import pricingPlans from '../data/pricingPlans.json';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
+import Image from 'next/image';
 
-const Programs = () => {
-  const service = [
-    {
-      img: '/assets/ux.svg',
-      title: 'Ux Design',
-      sub: 'Lessons on design that cover the most recent developments.',
-    },
-    {
-      img: '/assets/web.svg',
-      title: 'Web Development',
-      sub: 'Lessons on design that cover the most recent developments.',
-    },
-    {
-      img: '/assets/market.svg',
-      title: 'Marketing',
-      sub: 'Lessons on design that cover the most recent developments.',
-    },
-  ]
-
-  return (
-    <div className='container mx-auto items-center py-10'>
-      <p className='text-lg text-purple-500 text-center font-medium'>Our Programs</p>
-      <p className='text-3xl font-semibold text-center py-3'>
-        Fostering a playful & engaging learning <br />
-        environment
-      </p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-16 pt-10'>
-        {service.map((ser, i) => {
-          return (
-            <div
-              className='px-6 py-8 rounded-xl bg-gray-50 hover:bg-purple-600 group border border-gray-300'
-              key={i}
-            >
-              <div className='flex gap-3 items-center'>
-                <Image src={ser.img} alt="service icon" width={50} height={50} />
-                <p className='text-2xl group-hover:text-white font-semibold'>
-                  {ser.title}
-                </p>
-              </div>
-              <p className='text-base group-hover:text-white pr-6 py-2'>{ser.sub}</p>
-              <button className='flex gap-2 items-center text-purple-600 group-hover:text-white'>
-                Learn More <IoIosArrowForward />
-              </button>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
+interface ProgramFeatures {
+  dataAnalytics: boolean;
+  pythonAndStatistics: boolean;
+  dataVisualization: boolean;
+  projects: string;
+  machineLearning: string;
+  dataStructuresAlgorithms: boolean;
+  cloudComputing: boolean;
+  deepLearning: boolean;
+  naturalLanguageProcessing: boolean;
+  computerVision: boolean;
+  softwareEngineering: string;
+  paidInternship: boolean;
+  certificate: boolean;
 }
 
-export default Programs
+interface ProgramDetails {
+  title: string;
+  price: number;
+  features: ProgramFeatures;
+  careerTitles: string[];
+}
+
+const Programs: React.FC = () => {
+  const [selectedProgram, setSelectedProgram] = useState<ProgramDetails | null>(null);
+
+  const handleCarouselClick = (programIndex: number) => {
+    setSelectedProgram(pricingPlans[programIndex]);
+  };
+
+  return (
+    <div className="container mx-auto py-10">
+      <h1 className="text-4xl font-bold text-center mb-6">Career Paths</h1>
+
+      {/* Carousel for Career Titles */}
+      <Carousel
+        showArrows={true}
+        autoPlay={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        showStatus={false}
+        onClickItem={handleCarouselClick}
+      >
+        {pricingPlans.map((program: ProgramDetails, index) => (
+          <div key={index} className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
+            <figure>
+              {/* Add an image here */}
+              <Image 
+                src={`/assets/career${index + 1}.webp`} // Assumes you have career images named career1.jpg, career2.jpg, etc.
+                alt={program.title}
+                width={500}
+                height={300}
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-lg font-semibold mb-2">{program.title}</h2>
+              <ul className="space-y-1">
+                {program.careerTitles.map((career, i) => (
+                  <li key={i} className="text-gray-500">• {career}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </Carousel>
+
+      {/* Program Details Section */}
+      {selectedProgram && (
+        <div className="mt-10">
+          <h2 className="text-3xl font-bold text-center mb-4">{selectedProgram.title}</h2>
+          <p className="text-xl font-semibold text-center mb-4">₹{selectedProgram.price.toLocaleString()}/month</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="col-span-2 md:col-span-1">
+              <h3 className="text-lg font-semibold mb-2">Career Titles</h3>
+              <ul className="space-y-1">
+                {selectedProgram.careerTitles.map((career, i) => (
+                  <li key={i} className="text-gray-500">• {career}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="col-span-2 md:col-span-3">
+              <h3 className="text-lg font-semibold mb-2">Features</h3>
+              <ul className="space-y-1">
+                {Object.entries(selectedProgram.features).map(([featureKey, featureValue], i) => {
+                  const formattedFeature = `${featureKey.replace(/([A-Z])/g, ' $1')}`; // Converts camelCase to space-separated words
+                  return (
+                    <li key={i} className="text-gray-600">
+                      <strong>{formattedFeature}:</strong> {typeof featureValue === 'boolean' ? (featureValue ? 'Yes' : 'No') : featureValue}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Programs;
