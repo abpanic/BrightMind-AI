@@ -14,38 +14,38 @@ const NavBar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6">
-          <Link href="./Programs.tsx" className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+          <Link href="./Programs.tsx" className="text-base font-bold text-grey-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
               Programs            
           </Link>
-          <Link href="./WhyChooseUs.tsx" className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+          <Link href="./WhyChooseUs.tsx" className="text-base font-bold  text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
               BrightMind's Industry Edge            
           </Link>
           <Link href="./EnterprisePartnerships.tsx"
-             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+             className="text-base font-bold  text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
               Industry Collboration
             
           </Link>
           {/*<Link href="/pricing"
-             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+             className="text-base font-bold  text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
               Pricing
             
           </Link>*/}
           <Link href="/placement"
-             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+             className="text-base font-bold  text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
               Hire from Us
             
           </Link>
           <Link href="/candidateassist"
-             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+             className="text-base font-bold  text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
               Candidate Assistance
             
           </Link>
         </div>
 
         {/* Sign In */}
-        <div className="flex items-center gap-4">
+        <div className="btn btn-active btn-accent">
           <Link href="/sign-in"
-             className="text-base font-medium text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+             className="text-base font-bold  text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
               Sign In
             
           </Link>
