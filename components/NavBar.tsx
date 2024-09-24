@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6">
-          <Link href="./Programs.tsx" className="text-base font-semibold  text-grey-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg">
+          <Link href="./Programs.tsx" className="text-base font-semibold  text-grey-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
               Programs            
           </Link>
           <Link href="./WhyChooseUs.tsx" className="text-base font-semibold   text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">

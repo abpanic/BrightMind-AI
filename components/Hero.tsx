@@ -17,11 +17,11 @@ const Hero = () => {
             market ready skill development learning designed to help you excel in Emerging Technology
           </p>
           <div className="flex gap-4">
-            <button className="btn bg-purple-500 border-none capitalize btn-lg">
+            <button className="btn bg-[#533549] text-[#F6B042] hover:bg-[#6a4961] capitalize px-6 py-3 rounded-md">
               Get Started
             </button>
-            <button className="btn bg-purple-100 text-purple-500 border-none capitalize btn-lg">
-              Sign Up Free Trial
+            <button className="btn bg-[#F6B042] text-[#533549] hover:bg-[#ffc275] capitalize px-6 py-3 rounded-md">
+              Get Free Trial
             </button>
           </div>
           <div className="flex gap-6 items-center pt-6">

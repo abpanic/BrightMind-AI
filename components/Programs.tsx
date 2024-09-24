@@ -45,10 +45,13 @@ const Programs: React.FC = () => {
         infiniteLoop={true}
         showThumbs={false}
         showStatus={false}
+        centerMode={true}
+        showIndicators={true}
+        
         onClickItem={handleCarouselClick}
       >
         {pricingPlans.map((program: ProgramDetails, index) => (
-          <div key={index} className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
+          <div key={index} className="card card-compact w-96 bg-base-100 shadow-l mx-auto">
             <figure>
               {/* Add an image here */}
               <Image 
@@ -59,10 +62,10 @@ const Programs: React.FC = () => {
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-lg font-semibold mb-2">{program.title}</h2>
+              <h2 className="card-title text-base font-semibold justify-center">{program.title}</h2>
               <ul className="space-y-1">
                 {program.careerTitles.map((career, i) => (
-                  <li key={i} className="text-gray-500">• {career}</li>
+                  <li key={i} className="text-gray-800 align-middle">• {career}</li>
                 ))}
               </ul>
             </div>
@@ -81,7 +84,7 @@ const Programs: React.FC = () => {
               <h3 className="text-lg font-semibold mb-2">Career Titles</h3>
               <ul className="space-y-1">
                 {selectedProgram.careerTitles.map((career, i) => (
-                  <li key={i} className="text-gray-500">• {career}</li>
+                  <li key={i} className="text-gray-800">• {career}</li>
                 ))}
               </ul>
             </div>
@@ -92,7 +95,7 @@ const Programs: React.FC = () => {
                 {Object.entries(selectedProgram.features).map(([featureKey, featureValue], i) => {
                   const formattedFeature = `${featureKey.replace(/([A-Z])/g, ' $1')}`; // Converts camelCase to space-separated words
                   return (
-                    <li key={i} className="text-gray-600">
+                    <li key={i} className="text-gray-800">
                       <strong>{formattedFeature}:</strong> {typeof featureValue === 'boolean' ? (featureValue ? 'Yes' : 'No') : featureValue}
                     </li>
                   );

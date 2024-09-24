@@ -17,10 +17,10 @@ const Footer = () => {
               width={150} 
               height={50} 
             />
-            <p>Empowering minds through AI education to create future leaders in the tech world.</p>
+            <h6>Empowering minds through education to create future leaders in the emering field of technology.</h6>
           </div>
           <div className="flex flex-col gap-1">
-            <p className='text-[#F6B042] text-l font-semibold'>Courses</p>
+            <h6 className='text-[#F6B042] footer-title'>Courses</h6>
             <Link href="/" className='text-base font-medium'>Overview</Link>
             <Link href="/"  className='text-base font-medium'>Curriculum</Link>
             <Link href="/"  className='text-base font-medium'>Live Sessions</Link>
@@ -28,20 +28,21 @@ const Footer = () => {
             <Link href="/pricing"  className='text-base font-medium'>Pricing</Link>
           </div>
           <div className="flex flex-col gap-1">
-            <p className='text-[#F6B042] text-xl font-semibold'>About</p>
+            <h6 className='text-[#F6B042] footer-title'>About</h6>
             <Link href="/"  className='text-base font-medium'>Our Story</Link>
             <Link href="/"  className='text-base font-medium'>Careers</Link>
           </div>
           <div className="flex flex-col gap-1">
-            <p className='text-[#F6B042] text-xl font-semibold'>Support</p>
+            <h6 className='text-[#F6B042] footer-title'>Support</h6>
             <Link href="./terms"  className='text-base font-medium'>Terms</Link>
             <Link href="/privacy"  className='text-base font-medium'>Privacy</Link>
             <Link href="/cookies"  className='text-base font-medium'>Cookies</Link>
             <Link href="/contact"  className='text-base font-medium'>Contact</Link>
           </div>
         </div> 
-        <div className="flex justify-between items-center pt-20 pb-5">
-          <p className='text-[#F6B042] text-base'>© 2024 BrightMind AI. All rights reserved.</p>
+        <div className="footer justify-between items-center pt-1 pb-1">
+        {/* footer-left bg-base-300 text-base-content p-4*/}
+          <h6 className='text-[#F6B042] text-base'>© 2024 BrightMind AI. All rights reserved.</h6>
           <div className="flex gap-3">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <BsFacebook className='text-[#F6B042] hover:text-purple-500' />
