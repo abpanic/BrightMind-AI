@@ -9,7 +9,7 @@ const NavBar: React.FC = () => {
         
         {/* Logo */}
         <Link href="/">
-          <Image src="/assets/logo.svg" alt="BrightMind AI Logo" width={120} height={40} />
+          <Image src="/assets/logo.svg" alt="BrightMind AI Logo" width={120} height={30} />
         </Link>
 
         {/* Navigation Links */}

@@ -2,7 +2,7 @@ import React from 'react'
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs'
 import Image from 'next/image'
 import Link from 'next/link'
-import TermsOfUse from './terms'
+
 
 const Footer = () => {
   return (
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-1">
             <p className='text-[#F6B042] text-xl font-semibold'>Support</p>
-            <Link href="./terms.tsx"  className='text-base font-medium'>Terms</Link>
+            <Link href="./terms"  className='text-base font-medium'>Terms</Link>
             <Link href="/privacy"  className='text-base font-medium'>Privacy</Link>
             <Link href="/cookies"  className='text-base font-medium'>Cookies</Link>
             <Link href="/contact"  className='text-base font-medium'>Contact</Link>
