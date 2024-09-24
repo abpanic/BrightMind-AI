@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Data Analytics Basics",
+    "price": 1000,
+    "features": {
+      "dataAnalytics": true,
+      "pythonAndStatistics": true,
+      "dataVisualization": true,
+      "projects": "Small Datasets",
+      "machineLearning": "None",
+      "dataStructuresAlgorithms": false,
+      "cloudComputing": false,
+      "deepLearning": false,
+      "naturalLanguageProcessing": false,
+      "computerVision": false,
+      "softwareEngineering": "None",
+      "paidInternship": false,
+      "certificate": false
+    },
+    "careerTitles": [
+      "Business Analyst",
+      "Data Analyst"
+    ]
+  },
+  {
+    "title": "AI Foundations & Data Structures",
+    "price": 5000,
+    "features": {
+      "dataAnalytics": true,
+      "pythonAndStatistics": true,
+      "dataVisualization": true,
+      "projects": "Significant Datasets",
+      "machineLearning": "Supervised Learning",
+      "dataStructuresAlgorithms": true,
+      "cloudComputing": true,
+      "deepLearning": false,
+      "naturalLanguageProcessing": false,
+      "computerVision": false,
+      "softwareEngineering": "HTML, CSS, JavaScript",
+      "paidInternship": false,
+      "certificate": true
+    },
+    "careerTitles": [
+      "Junior Data Scientist",
+      "Machine Learning Engineer"
+    ]
+  },
+  {
+    "title": "Advanced AI & Data Science",
+    "price": 10000,
+    "features": {
+      "dataAnalytics": true,
+      "pythonAndStatistics": true,
+      "dataVisualization": true,
+      "projects": "Industry Datasets",
+      "machineLearning": "Supervised, Unsupervised Learning",
+      "dataStructuresAlgorithms": true,
+      "cloudComputing": true,
+      "deepLearning": true,
+      "naturalLanguageProcessing": true,
+      "computerVision": true,
+      "softwareEngineering": "React, App Creation",
+      "paidInternship": false,
+      "certificate": true
+    },
+    "careerTitles": [
+      "Data Scientist",
+      "Artificial Intelligence Specialist"
+    ]
+  },
+  {
+    "title": "AI Mastery & Full Stack Engineering",
+    "price": 25000,
+    "features": {
+      "dataAnalytics": true,
+      "pythonAndStatistics": true,
+      "dataVisualization": true,
+      "projects": "Complex Industry Datasets",
+      "machineLearning": "Supervised, Unsupervised, Reinforcement Learning, AutoML",
+      "dataStructuresAlgorithms": true,
+      "cloudComputing": true,
+      "deepLearning": true,
+      "naturalLanguageProcessing": true,
+      "computerVision": true,
+      "softwareEngineering": "Full Stack Development, CI/CD, DevOps",
+      "paidInternship": true,
+      "certificate": true
+    },
+    "careerTitles": [
+      "Software Engineer",
+      "AI Engineer",
+      "Data Scientist"
+    ]
+  }
+]
