@@ -10,36 +10,23 @@ const WhyChooseUs = () => {
       <div className="flex flex-col md:flex-row justify-between items-center py-10">
         
         {/* Left Content */}
-        <div className="flex flex-col gap-6 max-w-lg">
-          <h1 className="text-5xl md:text-7xl font-bold capitalize">
-            Why Choose{" "}
-            <span className="text-[#533549] pl-1">BrightMind AI?</span>
-          </h1>
-          <p className="text-lg text-gray-600">
-            Empower yourself with cutting-edge AI technologies, industry-recognized certifications, and real-world experience at BrightMind AI.
-          </p>
-
-        </div>
-
-        {/* Hero Image */}
-        <div className="pt-10 md:pt-0">
-          <Image 
-            src="/assets/hero.png" 
-            alt="BrightMind AI Hero" 
-            width={500} 
-            height={500} 
-            layout="intrinsic" 
-            priority
-          />
-        </div>
+        <div className="flex flex-col gap-6 max-w-lg p-6 md:p-0">
+    <blockquote className="text-4xl font-extrabold italic text-center text-gray-800">
+      Why Choose{" "}
+      <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r from-pink-500 to-purple-500 relative inline-block transform rotate-1">
+        <span className="relative text-white px-2 py-1">BrightMind AI</span>
+      </span>?
+    </blockquote>
+    <p className="text-xl text-gray-700 text-center md:text-left">
+      Our expert services tailored to boost your career goals in AI and Data Science.
+    </p>
+  </div>
       </div>
 
       {/* Carousel Section */}
-      <div className="carousel w-full space-x-4 carousel-center bg-gray-100 p-4 rounded-box">
-        
-        {/* Card 1 */}
-        <div className="carousel-item">
-          <div className="card w-80 bg-white shadow-lg mx-4 p-6 rounded-md">
+      <div className="carousel w-full p-4 rounded-box carousel-center">
+        <div className="carousel-item w-80">
+          <div className="card bg-white shadow-lg mx-4 p-6 rounded-md">
             <div className="flex items-center gap-4">
               <FaChalkboardTeacher className="text-4xl text-[#533549]" />
               <h3 className="text-2xl font-bold">Mentorship by Experts</h3>
@@ -50,9 +37,8 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Card 2 */}
-        <div className="carousel-item">
-          <div className="card w-80 bg-white shadow-lg mx-4 p-6 rounded-md">
+        <div className="carousel-item w-80">
+          <div className="card bg-white shadow-lg mx-4 p-6 rounded-md">
             <div className="flex items-center gap-4">
               <FaCreditCard className="text-4xl text-[#533549]" />
               <h3 className="text-2xl font-bold">Flexible Payment Options</h3>
@@ -63,9 +49,8 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Card 3 */}
-        <div className="carousel-item">
-          <div className="card w-80 bg-white shadow-lg mx-4 p-6 rounded-md">
+        <div className="carousel-item w-80">
+          <div className="card bg-white shadow-lg mx-4 p-6 rounded-md">
             <div className="flex items-center gap-4">
               <FaCertificate className="text-4xl text-[#533549]" />
               <h3 className="text-2xl font-bold">Industry Certifications</h3>
@@ -76,9 +61,8 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Card 4 */}
-        <div className="carousel-item">
-          <div className="card w-80 bg-white shadow-lg mx-4 p-6 rounded-md">
+        <div className="carousel-item w-80">
+          <div className="card bg-white shadow-lg mx-4 p-6 rounded-md">
             <div className="flex items-center gap-4">
               <FaHandsHelping className="text-4xl text-[#533549]" />
               <h3 className="text-2xl font-bold">Paid Internships</h3>
@@ -89,9 +73,8 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Card 5 */}
-        <div className="carousel-item">
-          <div className="card w-80 bg-white shadow-lg mx-4 p-6 rounded-md">
+        <div className="carousel-item w-80">
+          <div className="card bg-white shadow-lg mx-4 p-6 rounded-md">
             <div className="flex items-center gap-4">
               <FaBrain className="text-4xl text-[#533549]" />
               <h3 className="text-2xl font-bold">Cutting-Edge Tech</h3>
@@ -102,9 +85,8 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Card 6 */}
-        <div className="carousel-item">
-          <div className="card w-80 bg-white shadow-lg mx-4 p-6 rounded-md">
+        <div className="carousel-item w-80">
+          <div className="card bg-white shadow-lg mx-4 p-6 rounded-md">
             <div className="flex items-center gap-4">
               <FaCoins className="text-4xl text-[#533549]" />
               <h3 className="text-2xl font-bold">Multiple Pricing Tiers</h3>
@@ -114,7 +96,6 @@ const WhyChooseUs = () => {
             </p>
           </div>
         </div>
-
       </div>
     </div>
   );
