@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const NavBar: React.FC = () => {
   return (
-    <nav className="navbar bg-white shadow-md py-2">
+    <nav className="navbar bg-[#533549] shadow-md py-2">
       <div className="container mx-auto flex flex-row justify-between items-center">
         
         {/* Logo */}
@@ -14,38 +14,38 @@ const NavBar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6">
-          <Link href="./Programs.tsx" className="text-base font-semibold  text-grey-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
+          <Link href="./Programs.tsx" className="text-base font-semibold text-[#F6B042] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Programs            
           </Link>
-          <Link href="./WhyChooseUs.tsx" className="text-base font-semibold   text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
+          <Link href="./WhyChooseUs.tsx" className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               BrightMind's Industry Edge            
           </Link>
           <Link href="./EnterprisePartnerships.tsx"
-             className="text-base font-semibold   text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
+             className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Industry Collboration
             
           </Link>
           {/*<Link href="/pricing"
-             className="text-base font-semibold   text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
+             className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Pricing
             
           </Link>*/}
           <Link href="/placement"
-             className="text-base font-semibold   text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
+             className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Hire from Us
             
           </Link>
           <Link href="/candidateassist"
-             className="text-base font-semibold   text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
+             className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Candidate Assistance
             
           </Link>
         </div>
 
         {/* Sign In */}
-        <div className="btn btn-active btn-accent">
+        <div className="btn btn-primary rounded-full background-color: black">
           <Link href="/sign-in"
-             className="text-base font-semibold   text-gray-800 hover:bg-[#533549] hover:text-[#F6B042] transition-colors duration-200 px-3 py-1 rounded-lg font-marmelad">
+             className="text-base text-white hover:text-grey-800 transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Sign In
             
           </Link>
