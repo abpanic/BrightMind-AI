@@ -48,24 +48,63 @@ const WhyChooseUs = () => {
 
         {/* Card 2 */}
         <BentoGridItem
-          title="Flexible Payment Options"
-          description="Choose between monthly payments or a one-time annual payment with savings."
-          icon={<FaCreditCard className="text-4xl text-[#533549]" />}
-        />
+  title={
+    <div className="flex items-center gap-2">
+      <FaCreditCard className="text-4xl text-[#533549]" />
+      <h3 className="text-xl font-semibold text-[#533549]">Flexible Payment Options</h3>
+    </div>
+  }
+  description={
+    <p className="text-base text-gray-700 mt-2 leading-relaxed">
+      Choose between <span className="font-bold text-[#f66042]">monthly</span> or a save with <span className="font-bold text-[#f66042]">one-time annual payment</span>. Pricing models designed to be accessible for everyone, no matter your financial situation.
+      <br />
+      Programs priced and planned so that they have a proven market value of <span className="font-bold text-[#533549]">10 times</span> the program fee, making this an investment that pays off quickly in your career.
+    </p>
+  }
+  className="p-6 bg-white shadow-lg rounded-lg hover:shadow-2xl transition-all duration-300 max-w-full transform hover:scale-105"
+  icon={<FaCreditCard className="hidden" />} // Icon hidden here since it's used in title
+/>
+
 
         {/* Card 3 */}
         <BentoGridItem
-          title="Industry Certifications"
-          description="Earn certifications recognized by top industry players."
-          icon={<FaCertificate className="text-4xl text-[#533549]" />}
-        />
+  title={
+    <div className="flex items-center gap-2">
+      <FaCertificate className="text-4xl text-[#533549]" />
+      <h3 className="text-xl font-semibold text-[#533549]">Industry Certifications</h3>
+    </div>
+  }
+  description={
+    <p className="text-base text-gray-700 mt-2 leading-relaxed">
+      Earn <span className="font-bold text-[#533549]">certifications</span> and skills that are recognized by top companies. You complete with portfolio of industry projects<span className="italic text-[#f66042]">practical, hands-on experience</span> through industry scenarios.
+      <br />
+      <span className="font-bold text-[#f66042]">Hands-on industry projects</span> allow you to apply your knowledge in solving real-world problems, ensuring you're prepared for the demands of the tech industry.
+    </p>
+  }
+  className="p-6 bg-white shadow-lg rounded-lg hover:shadow-2xl transition-all duration-300 max-w-full transform hover:scale-105"
+/>
+
+
 
         {/* Card 4 */}
         <BentoGridItem
-          title="Paid Internships"
-          description="Top-performing students get paid internships with housing and food covered."
-          icon={<FaHandsHelping className="text-4xl text-[#533549]" />}
-        />
+  title={
+    <div className="flex items-center gap-2">
+      <FaHandsHelping className="text-4xl text-[#533549]" />
+      <h3 className="text-xl font-semibold text-[#533549]">Paid Internships</h3>
+    </div>
+  }
+  description={
+    <p className="text-base text-gray-700 mt-2 leading-relaxed">
+      Top-performing students will have the opportunity to participate in <span className="font-bold text-[#f66042]">paid internships</span>, offering hands-on experience in industrial projects.
+      <br />
+      These internships go beyond classroom learning, providing practical exposure in a professional environment. The program covers <span className="font-bold text-[#533549]">housing and food</span> for the duration of the internship, making it an immersive learning experience.
+      
+    </p>
+  }
+  className="p-6 bg-white shadow-lg rounded-lg hover:shadow-2xl transition-all duration-300 max-w-full transform hover:scale-105"
+/>
+
 
         {/* Card 5 */}
         <BentoGridItem
