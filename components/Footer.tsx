@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto py-5">
         <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-white">
          
-          <div className="flex flex-col gap-4">
+          {/*<div className="flex flex-col gap-4">
             <Image 
               src="/assets/logo.svg" 
               alt="BrightMind AI Logo" 
