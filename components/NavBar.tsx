@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
           <Link href="./Programs.tsx" className="text-base font-semibold text-[#F6B042] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Programs            
           </Link>
-          <Link href="./WhyChooseUs.tsx" className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
+          <Link href="./whychooseus" className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               BrightMind's Industry Edge            
           </Link>
           <Link href="./EnterprisePartnerships.tsx"
