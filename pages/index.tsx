@@ -2,10 +2,8 @@ import Head from 'next/head'
 import Hero from '../components/Hero'
 import Programs from '../components/Programs'
 import WhyChooseUs from '../components/WhyChooseUs'
-import EnterprisePartnerships from './EnterprisePartnerships'
 import PopularCourses from '../components/PopularCourses'
 import Resources from '../components/Resources'
-import Pricing from '../components/Pricing'
 
 const Home: React.FC = () => {
   return (
@@ -19,11 +17,9 @@ const Home: React.FC = () => {
       </Head>
       <Hero />
       <Programs />
-      <WhyChooseUs />
-      <EnterprisePartnerships />
+      <WhyChooseUs />      
       <PopularCourses />
-      <Resources />
-      <Pricing />
+      <Resources />      
     </div>
   )
 }
