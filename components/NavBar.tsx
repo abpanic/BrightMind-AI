@@ -14,22 +14,17 @@ const NavBar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6">
-          <Link href="./Programs.tsx" className="text-base font-semibold text-[#F6B042] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
+          <Link href="./programs" className="text-base font-semibold text-[#F6B042] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Programs            
           </Link>
           <Link href="./whychooseus" className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               BrightMind's Industry Edge            
           </Link>
-          <Link href="./EnterprisePartnerships.tsx"
+          <Link href="./EnterprisePartnerships"
              className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
-              Industry Collboration
+              Industry Collaboration
             
           </Link>
-          {/*<Link href="/pricing"
-             className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
-              Pricing
-            
-          </Link>*/}
           <Link href="/placement"
              className="text-base font-semibold text-[#F6B042] hover:bg-[#533549] hover:text-white transition-colors duration-200 px-3 py-1 rounded-full font-marmelad">
               Hire from Us
