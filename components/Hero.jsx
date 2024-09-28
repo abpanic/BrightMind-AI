@@ -67,8 +67,8 @@ const JobCarousel = () => {
             </figure>
             <div className="mt-4">
               <h2 className="text-xl font-semibold text-gray-800">{job.title}</h2>
-              <p className="text-lg text-red-800">{job.salary}</p>
-              <p className="text-indigo-800">{job.company}</p>
+              <p className="text-lg text-red-800 font-bold">{job.salary}</p>
+              <p className="text-indigo-800 font-semibold">{job.company}</p>
             </div>
           </div>
         ))}

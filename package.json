@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-responsive-carousel": "^3.2.23",
+    "react-rough-notation": "^1.0.5",
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {

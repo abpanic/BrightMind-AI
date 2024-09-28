@@ -8,26 +8,48 @@ const Programs = () => {
 
   // Map pricing plans to cards
   const cards = pricingPlans.map((program, index) => (
-    <Card key={index} card={{
-      category: program.title,
-      title: program.title,
-      src: `/assets/career${index + 1}.webp`, // Assume career images follow a pattern
-      content: (
-        <>
-          <h3 className="text-lg font-semibold mb-2">Career Titles</h3>
-          <ul className="space-y-1">
-            {program.careerTitles.map((career, i) => (
-              <li key={i} className="text-gray-800">• {career}</li>
-            ))}
-          </ul>
-        </>
-      ),
-    }} index={index} />
+    <Card 
+      key={index} 
+      card={{
+        category: program.title,
+        title: program.title,
+        src: `/assets/career${index + 1}.webp`, // Assume career images follow a pattern
+        content: (
+          <>
+            <div className="relative">
+              {/* Grayscale Image */}
+              <img
+                className="w-full h-64 object-cover object-center rounded-md filter grayscale"
+                src={`/assets/career${index + 1}.webp`}
+                alt={program.title}
+              />
+              {/* Text Positioned over Image */}
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 rounded-md">
+                <h3 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                  {program.title}
+                </h3>
+              </div>
+            </div>
+            {/* Below Image Text */}
+            <div className="bg-white p-4 rounded-b-md">
+              <ul className="space-y-1">
+                {program.careerTitles.map((career, i) => (
+                  <li key={i} className="text-gray-800">• {career}</li>
+                ))}
+              </ul>
+            </div>
+          </>
+        ),
+      }} 
+      index={index} 
+    />
   ));
 
   return (
     <div className="w-full h-full py-10">
-      <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text mb-6">Career Paths</h1>
+      <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text mb-6">
+        Career Paths
+      </h1>
 
       {/* Carousel for Career Titles */}
       <Carousel items={cards} />
