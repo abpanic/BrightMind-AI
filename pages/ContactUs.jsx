@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import workExperienceOptions from '../data/workExperienceOptions.json';
-import countrycodes from '../data/countrycodes.json'
+import countrycodes from '../data/countryCodes.json'
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
