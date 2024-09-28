@@ -19,13 +19,13 @@ const Programs = () => {
             <div className="relative">
               {/* Grayscale Image */}
               <img
-                className="w-full h-64 object-cover object-center rounded-md filter grayscale"
+                className="w-full h-64 object-cover object-center rounded-md "
                 src={`/assets/career${index + 1}.webp`}
                 alt={program.title}
               />
               {/* Text Positioned over Image */}
               <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 rounded-md">
-                <h3 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                <h3 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text ">
                   {program.title}
                 </h3>
               </div>
@@ -34,7 +34,7 @@ const Programs = () => {
             <div className="bg-white p-4 rounded-b-md">
               <ul className="space-y-1">
                 {program.careerTitles.map((career, i) => (
-                  <li key={i} className="text-gray-800">• {career}</li>
+                  <li key={i} className="text-gray-800 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text">• {career}</li>
                 ))}
               </ul>
             </div>
