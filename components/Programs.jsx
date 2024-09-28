@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
 import pricingPlans from '../data/pricingPlans.json';
+import Link from "next/link"; 
 
 const Programs = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -13,30 +14,32 @@ const Programs = () => {
       card={{
         category: program.title,
         title: program.title,
-        src: `/assets/career${index + 1}.webp`, // Assume career images follow a pattern
         content: (
           <>
-            <div className="relative">
-              {/* Grayscale Image */}
-              <img
-                className="w-full h-64 object-cover object-center rounded-md "
-                src={`/assets/career${index + 1}.webp`}
-                alt={program.title}
-              />
-              {/* Text Positioned over Image */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 rounded-md">
-                <h3 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text ">
-                  {program.title}
-                </h3>
-              </div>
-            </div>
-            {/* Below Image Text */}
-            <div className="bg-white p-4 rounded-b-md">
-              <ul className="space-y-1">
+            {/* Program Details */}
+            <div className="bg-white p-6 rounded-md shadow-lg">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">
+                {program.title}
+              </h3>
+              <ul className="space-y-1 mb-4">
                 {program.careerTitles.map((career, i) => (
-                  <li key={i} className="text-gray-800 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text">• {career}</li>
+                  <li key={i} className="text-gray-800">• {career}</li>
                 ))}
               </ul>
+
+              {/* Price Section */}
+              <p className="text-xl font-semibold text-gray-700 text-center mb-4">
+                Price: ₹{program.price.toLocaleString()}/month
+              </p>
+
+              {/* Enroll Now Button */}
+              <div className="flex justify-center">
+                <Link href="/ContactUs">
+                  <button className="bg-[#533549] text-white px-4 py-2 rounded-md hover:bg-purple-700">
+                    Enroll Now
+                  </button>
+                </Link>
+              </div>
             </div>
           </>
         ),
