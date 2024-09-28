@@ -27,7 +27,7 @@ const Programs = () => {
 
   return (
     <div className="w-full h-full py-10">
-      <h1 className="text-4xl font-bold text-center mb-6">Career Paths</h1>
+      <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text mb-6">Career Paths</h1>
 
       {/* Carousel for Career Titles */}
       <Carousel items={cards} />

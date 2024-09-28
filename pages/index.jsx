@@ -15,10 +15,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />        
       </Head>
       <Hero />
-      {/*<Programs />
-      <WhyChooseUs />      
+      <Programs />
+      {/*<WhyChooseUs />      
       <PopularCourses />  */}
-      <FAQ />
     </div>
   )
 }
