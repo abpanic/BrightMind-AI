@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
 import Programs from '../components/Programs'
-import WhyChooseUs from '../components/WhyChooseUs'
+import WhyChooseUs from './whychooseus'
 import PopularCourses from '../components/PopularCourses'
-import Resources from '../components/Resources'
+import FAQ from './FAQ'
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -15,10 +15,10 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />        
       </Head>
       <Hero />
-      <Programs />
+      {/*<Programs />
       <WhyChooseUs />      
-      <PopularCourses />
-      <Resources />      
+      <PopularCourses />  */}
+      <FAQ />
     </div>
   )
 }

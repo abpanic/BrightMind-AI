@@ -27,7 +27,7 @@ const Testimonials = () => {
       />
       
       <p className='text-lg font-medium'>Jacob Jonas</p>
-      <p className='text-base text-gray-400 font-medium'>
+      <p className='text-base text-grey-400 font-medium'>
         AI Engineer, United International University
       </p>
       
@@ -40,7 +40,7 @@ const Testimonials = () => {
         </p>
         <Image src="/assets/person2.svg" alt="Sara Smith" width={100} height={100} className='my-6' />
         <p className='text-lg font-medium'>Sara Smith</p>
-        <p className='text-base text-gray-400 font-medium'>Data Scientist, Tech Innovators Inc.</p>
+        <p className='text-base text-grey-400 font-medium'>Data Scientist, Tech Innovators Inc.</p>
       </div>
       */}
       

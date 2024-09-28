@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import pricingPlans from '../data/pricingPlans.json'
-import 'daisyui';
+
 
 interface PricingPlan {
   title: string;
@@ -44,7 +44,7 @@ const Pricing: React.FC = () => {
   return (
     <div className="container mx-auto py-10">
       <h1 className="text-4xl font-bold text-center">Pricing Plans</h1>
-      <p className="text-lg text-gray-600 text-center my-4">
+      <p className="text-lg text-grey-600 text-center my-4">
         Compare and choose the one that fits your aspirations.
       </p>
 
@@ -52,13 +52,13 @@ const Pricing: React.FC = () => {
       <div className="flex justify-center items-center mb-6">
         <div className="btn-group">
           <button 
-            className={`btn ${!isAnnual ? 'bg-gray-800 text-white' : 'bg-gray-300 text-black'}`}
+            className={`btn ${!isAnnual ? 'bg-gray-800 text-grey' : 'bg-gray-300 text-black'}`}
             onClick={() => setIsAnnual(false)}
           >
             Monthly
           </button>
           <button 
-            className={`btn ${isAnnual ? 'bg-gray-800 text-white' : 'bg-gray-300 text-black'}`}
+            className={`btn ${isAnnual ? 'bg-gray-800 text-grey' : 'bg-gray-300 text-black'}`}
             onClick={() => setIsAnnual(true)}
           >
             Annual (10% off)
@@ -71,9 +71,9 @@ const Pricing: React.FC = () => {
         <table className="table w-full table-zebra">
           <thead>
             <tr>
-              <th className="py-2 px-3 text-left bg-gray-800 text-white font-bold">Features</th>
+              <th className="py-2 px-3 text-left bg-gray-800 text-grey font-bold">Features</th>
               {pricingPlans.map((plan: PricingPlan, index) => (
-                <th key={index} className="py-2 px-3 text-center bg-gray-800 text-white font-bold">
+                <th key={index} className="py-2 px-3 text-center bg-gray-800 text-grey font-bold">
                   {plan.title} <br /> 
                   <span className="badge badge-lg badge-primary mt-2">
                     {calculatePrice(plan.price)}

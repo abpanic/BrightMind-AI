@@ -14,8 +14,8 @@ const PopularCourses = () => {
     },
     {
       img: "/assets/learn.svg",
-      title: "Web Development",
-      sub: "Lessons on design that cover the most recent developments.",
+      title: "Full Stack Web Development",
+      sub: "Start from basic to advanced for Full Stack.",
       promo: "development",
       rating: "4.5",
     },
@@ -32,7 +32,7 @@ const PopularCourses = () => {
     <div className="container mx-auto md:h-screen py-10">
       <p className="text-lg text-purple-500 font-medium">Explore Programs</p>
       <p className="text-3xl font-semibold py-3">Our Most Popular Class</p>
-      <p className="text-gray-500 text-base py-3">
+      <p className="text-grey-500 text-base py-3">
         Join our famous classes, and gain knowledge that will be useful for your
         career.
       </p>
@@ -49,26 +49,27 @@ const PopularCourses = () => {
               width={60}
               height={60}
             />
-            <p className="text-lg text-purple-600 group-hover:text-white capitalize py-2">
+            <p className="text-lg text-purple-600 group-hover:text-grey capitalize py-2">
               {ser.promo}
             </p>
             <div className="flex justify-between items-center">
-              <p className="text-2xl group-hover:text-white font-semibold line-clamp-1">
+              <p className="text-2xl group-hover:text-grey font-semibold line-clamp-1">
                 {ser.title}
               </p>
-              <HiOutlineArrowUpRight className="group-hover:text-white text-lg font-semibold" />
+              <HiOutlineArrowUpRight className="group-hover:text-grey text-lg font-semibold" />
             </div>
 
-            <p className="text-base group-hover:text-white pr-6 py-2">
+            <p className="text-base group-hover:text-grey pr-6 py-2">
               {ser.sub}
             </p>
-            <div className="flex items-center gap-2 group-hover:text-white">
+            <div className="flex items-center gap-2 group-hover:text-grey">
               <p>{ser.rating}</p>
               <Image
                 src="/assets/star.svg"
                 alt="star"
                 width={20}
                 height={20}
+                style={{ width: 'auto', height: 'auto' }}
               />
               <p>123</p>
             </div>
@@ -79,15 +80,16 @@ const PopularCourses = () => {
                   alt="person"
                   width={30}
                   height={30}
+                  style={{ width: 'auto', height: 'auto' }}
                 />
                 <div className="flex flex-col">
-                  <p className="text-sm group-hover:text-white">Jimmy</p>
-                  <p className="text-xs text-gray-500 group-hover:text-white">
+                  <p className="text-sm group-hover:text-grey">Jimmy</p>
+                  <p className="text-xs text-grey-500 group-hover:text-grey">
                     200 Enrolled
                   </p>
                 </div>
               </div>
-              <p className="text-xl text-purple-600 group-hover:text-white font-semibold">
+              <p className="text-xl text-purple-600 group-hover:text-grey font-semibold">
                 $13.45
               </p>
             </div>

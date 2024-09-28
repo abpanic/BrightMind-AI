@@ -1,6 +1,10 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+ 
+const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -34,45 +38,16 @@ module.exports = {
         "glass-card": "4px 4px 4px 4px rgba( 32, 32, 32, 0.37 )",
         "card-shadow": "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
         "dark-shadow": "10px 10px 5px 0px rgba(130,130,130,0.75)"
-      },
+      }
 
-      colors: {
-        bg: {
-          DEFAULT: "#ff5555",
-          200: "#272727",
-          300: "#2e2e2e",
-        },
-        primary: {
-          DEFAULT: "#ff5555",
-          50: "#F7C6C6",
-          100: "#F5B4B4",
-          200: "#F09090",
-          300: "#EC6C6C",
-          400: "#E74848",
-          500: "#DA1E37",
-          600: "#B61818",
-          700: "#841212",
-          800: "#530B0B",
-          900: "#210404",
-        },
-      },
+      
     },
   },
-  daisyui: {
-    themes: [
-      {
-        light: {
-          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-          primary: "#ff5555",
-          "primary-focus": "#E74848",
-        },
-      },
-    ],
-  },
-  plugins: [ require("daisyui"),addVariablesForColors],
+ 
+  plugins: [require("@tailwindcss/typography"), addVariablesForColors],
 };
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
+function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
@@ -82,3 +57,6 @@ function addVariablesForColors({ addBase, theme }: any) {
     ":root": newVars,
   });
 }
+
+
+

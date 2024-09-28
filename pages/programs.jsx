@@ -1,7 +1,7 @@
 import React from 'react'
 import Programs from '../components/Programs'
 
-const ProgramsPage: React.FC = () => {
+const ProgramsPage= () => {
   return (
     <div>
       <Programs />

@@ -24,11 +24,11 @@ const TermsOfUse: React.FC = () => {
             className="flex justify-between items-center cursor-pointer py-3 px-4 bg-gray-100 rounded-md hover:bg-gray-200 transition"
             onClick={() => toggleAccordion(index)}
           >
-            <h2 className="text-xl font-semibold text-gray-700">{section.title}</h2>
+            <h2 className="text-xl font-semibold text-white-700">{section.title}</h2>
             <span>{activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}</span>
           </div>
           {activeIndex === index && (
-            <div className="p-4 text-gray-600 bg-white transition-all duration-200">
+            <div className="p-4 text-grey-600 bg-white transition-all duration-200">
               <p>{section.content}</p>
             </div>
           )}
