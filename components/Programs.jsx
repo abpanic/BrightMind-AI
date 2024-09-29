@@ -2,25 +2,28 @@
 import React, { useState } from "react";
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
 import pricingPlans from '../data/pricingPlans.json';
-import Link from "next/link"; 
+import Link from "next/link";
 
 const Programs = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
 
   // Map pricing plans to cards
   const cards = pricingPlans.map((program, index) => (
-    <Card 
-      key={index} 
+    <Card
+      key={index}
       card={{
-        category: program.title,
         title: program.title,
+        price: program.price,
         content: (
           <>
             {/* Program Details */}
-            <div className="bg-white p-6 rounded-md shadow-lg">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">
+            <div className="bg-transparent p-6 rounded-md shadow-lg">
+              {/* Title */}
+              <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
                 {program.title}
               </h3>
+
+              {/* Career Titles */}
               <ul className="space-y-1 mb-4">
                 {program.careerTitles.map((career, i) => (
                   <li key={i} className="text-gray-800">• {career}</li>
@@ -32,10 +35,25 @@ const Programs = () => {
                 Price: ₹{program.price.toLocaleString()}/month
               </p>
 
+              {/* Features Section */}
+              <ul className="space-y-1 mb-4">
+                {Object.entries(program.features).map(([featureKey, featureValue], i) => {
+                  const formattedFeature = `${featureKey.replace(/([A-Z])/g, " $1")}`;
+                  return (
+                    <li key={i} className="text-gray-800">
+                      <strong>{formattedFeature}:</strong> {typeof featureValue === "boolean" ? (featureValue ? "Yes" : "No") : featureValue}
+                    </li>
+                  );
+                })}
+              </ul>
+
               {/* Enroll Now Button */}
               <div className="flex justify-center">
                 <Link href="/ContactUs">
-                  <button className="bg-[#533549] text-white px-4 py-2 rounded-md hover:bg-purple-700">
+                  <button
+                    className="bg-[#533549] text-white px-4 py-2 rounded-md hover:bg-purple-700"
+                    onClick={() => setSelectedProgram(program)}
+                  >
                     Enroll Now
                   </button>
                 </Link>
@@ -43,8 +61,9 @@ const Programs = () => {
             </div>
           </>
         ),
-      }} 
-      index={index} 
+        src: "/assets/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vMGVjNzRlNzEtNmNjYy00NzJjLWE3NzQtNDFlZDRlYzJkNmE4LmpwZWc.webp"
+      }}
+      index={index}
     />
   ));
 
@@ -63,7 +82,7 @@ const Programs = () => {
           <h2 className="text-3xl font-bold text-center mb-4">
             {selectedProgram.title}
           </h2>
-          <p className="text-xl font-semibold text-center mb-4">
+          <p className="text-xl font-semibold-white text-center mb-">
             ₹{selectedProgram.price.toLocaleString()}/month
           </p>
 
@@ -78,16 +97,20 @@ const Programs = () => {
             </div>
 
             <div className="col-span-2 md:col-span-3">
-              <h3 className="text-lg font-semibold mb-2">Features</h3>
+              <h3 className="text-lg font-semibold-black mb-2">Features</h3>
               <ul className="space-y-1">
-                {Object.entries(selectedProgram.features).map(([featureKey, featureValue], i) => {
+                {selectedProgram.features && Object.entries(selectedProgram.features).map(([featureKey, featureValue], i) => {
                   const formattedFeature = `${featureKey.replace(/([A-Z])/g, " $1")}`;
                   return (
                     <li key={i} className="text-gray-800">
-                      <strong>{formattedFeature}:</strong> {typeof featureValue === "boolean" ? (featureValue ? "Yes" : "No") : featureValue}
+                      <strong>{formattedFeature}:</strong>{" "}
+                      {typeof featureValue === "boolean" ? (featureValue ? "Yes" : "No") : featureValue}
                     </li>
                   );
                 })}
+                {!selectedProgram.features && (
+                  <li className="text-gray-800">No features available.</li>
+                )}
               </ul>
             </div>
           </div>

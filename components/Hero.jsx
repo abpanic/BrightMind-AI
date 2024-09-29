@@ -3,6 +3,8 @@ import { Carousel } from "react-responsive-carousel";
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Carousel styles
 import Image from 'next/image'; // For image handling
 import Link from "next/link";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+
 
 const JobCarousel = () => {
   const jobData = [
@@ -36,8 +38,13 @@ const JobCarousel = () => {
     <div className="container mx-auto py-10">
       {/* Hero Heading */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          Unlock High-Paying AI Careers with Industry-Backed Skills
+        
+      <h1 className="text-4xl font-bold text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+          Unlock{" "}
+          <RoughNotation type="highlight" show={true} color="#4a148c">
+            High-Paying
+          </RoughNotation>{" "}
+          AI Careers with Industry-Backed Skills
         </h1>
         <p className="text-sm text-gray-300 mt-2">
           <small>Below are from Naukri.com posted on September</small>

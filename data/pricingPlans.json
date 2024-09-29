@@ -1,6 +1,6 @@
 [
   {
-    "title": "Data Analytics Basics",
+    "title": "Data Analytics Foundation",
     "price": 1500,
     "features": {
       "dataAnalytics": true,
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "title": "AI Foundations & Data Structures",
+    "title": "AI Core Skills",
     "price": 7500,
     "features": {
       "dataAnalytics": true,
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "title": "Advanced AI & Data Science",
+    "title": "Advanced Insights & Data Science",
     "price": 15000,
     "features": {
       "dataAnalytics": true,
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "title": "AI Mastery & Full Stack Engineering",
+    "title": "Gen AI & Data Scientist",
     "price": 37500,
     "features": {
       "dataAnalytics": true,
