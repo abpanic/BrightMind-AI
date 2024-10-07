@@ -26,9 +26,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/FAQ" className="bg-[#533549]-800 text-white px-4 py-2 rounded-full hover:bg-gradient-to-r from-indigo-800 via-purple-500 to-purple-800 hover:bg-gray-600 font-semibold">
+            {/*<Link href="/FAQ" className="bg-[#533549]-800 text-white px-4 py-2 rounded-full hover:bg-gradient-to-r from-indigo-800 via-purple-500 to-purple-800 hover:bg-gray-600 font-semibold">
                 FAQ              
-            </Link>
+            </Link>*/}
           </li>
         </ul>
       </div>
