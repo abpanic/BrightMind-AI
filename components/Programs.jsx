@@ -1,120 +1,73 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
-import pricingPlans from '../data/pricingPlans.json';
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Programs = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
+  const [pricingPlans, setPricingPlans] = useState([]);
+
+  useEffect(() => {
+    // Fetch the pricing plans from a JSON file or a backend API
+    import('../data/pricingPlans.json')
+      .then((data) => setPricingPlans(data.default))
+      .catch((error) => console.error('Failed to load pricing plans:', error));
+  }, []);
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.5 } }
+  };
 
   // Map pricing plans to cards
   const cards = pricingPlans.map((program, index) => (
-    <Card
+    <motion.div
       key={index}
-      card={{
-        title: program.title,
-        price: program.price,
-        content: (
-          <>
-            {/* Program Details */}
-            <div className="bg-transparent p-6 rounded-md shadow-lg">
-              {/* Title */}
-              <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                {program.title}
-              </h3>
-
-              {/* Career Titles */}
-              <ul className="space-y-1 mb-4">
-                {program.careerTitles.map((career, i) => (
-                  <li key={i} className="text-gray-800">• {career}</li>
-                ))}
-              </ul>
-
-              {/* Price Section */}
-              <p className="text-xl font-semibold text-gray-700 text-center mb-4">
-                Price: ₹{program.price.toLocaleString()}/month
-              </p>
-
-              {/* Features Section */}
-              <ul className="space-y-1 mb-4">
-                {Object.entries(program.features).map(([featureKey, featureValue], i) => {
-                  const formattedFeature = `${featureKey.replace(/([A-Z])/g, " $1")}`;
-                  return (
-                    <li key={i} className="text-gray-800">
-                      <strong>{formattedFeature}:</strong> {typeof featureValue === "boolean" ? (featureValue ? "Yes" : "No") : featureValue}
-                    </li>
-                  );
-                })}
-              </ul>
-
-              {/* Enroll Now Button */}
-              <div className="flex justify-center">
-                <Link href="/ContactUs">
-                  <button
-                    className="bg-[#533549] text-white px-4 py-2 rounded-md hover:bg-purple-700"
-                    onClick={() => setSelectedProgram(program)}
-                  >
-                    Enroll Now
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </>
-        ),
-        src: "/assets/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vMGVjNzRlNzEtNmNjYy00NzJjLWE3NzQtNDFlZDRlYzJkNmE4LmpwZWc.webp"
-      }}
-      index={index}
-    />
+      className="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+    >
+      <img className="w-full h-48 object-cover" src={program.image || "/assets/default-image.webp"} alt={program.title} />
+      <div className="p-6">
+        <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">{program.title}</h3>
+        <p className="text-gray-700 text-center mb-4">Price: ₹{program.price.toLocaleString()}/month</p>
+        <button
+          className="block bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-md mx-auto hover:from-pink-500 hover:to-purple-500 transition-colors"
+          onClick={() => setSelectedProgram(program)}
+        >
+          Learn More
+        </button>
+      </div>
+    </motion.div>
   ));
 
   return (
-    <div className="w-full h-full py-10">
+    <div className="w-full h-full py-10 bg-transparent">
       <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text mb-6">
         Career Paths
       </h1>
-
-      {/* Carousel for Career Titles */}
       <Carousel items={cards} />
-
-      {/* Program Details Section */}
       {selectedProgram && (
-        <div className="mt-10">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            {selectedProgram.title}
-          </h2>
-          <p className="text-xl font-semibold-white text-center mb-">
-            ₹{selectedProgram.price.toLocaleString()}/month
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="col-span-2 md:col-span-1">
-              <h3 className="text-lg font-semibold mb-2">Career Titles</h3>
-              <ul className="space-y-1">
-                {selectedProgram.careerTitles.map((career, i) => (
-                  <li key={i} className="text-gray-800">• {career}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="col-span-2 md:col-span-3">
-              <h3 className="text-lg font-semibold-black mb-2">Features</h3>
-              <ul className="space-y-1">
-                {selectedProgram.features && Object.entries(selectedProgram.features).map(([featureKey, featureValue], i) => {
-                  const formattedFeature = `${featureKey.replace(/([A-Z])/g, " $1")}`;
-                  return (
-                    <li key={i} className="text-gray-800">
-                      <strong>{formattedFeature}:</strong>{" "}
-                      {typeof featureValue === "boolean" ? (featureValue ? "Yes" : "No") : featureValue}
-                    </li>
-                  );
-                })}
-                {!selectedProgram.features && (
-                  <li className="text-gray-800">No features available.</li>
-                )}
-              </ul>
-            </div>
+        <motion.div
+          className="mt-10 p-6 bg-white rounded-lg shadow-lg"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+        >
+          <h2 className="text-3xl font-bold text-center mb-4">{selectedProgram.title}</h2>
+          <p className="text-xl font-semibold text-center mb-4">Price: ₹{selectedProgram.price.toLocaleString()}/month</p>
+          <p className="text-gray-800 text-center mb-4">{selectedProgram.intro}</p>
+          <p className="text-gray-800 text-center mb-4">If you like: {selectedProgram.ifYouLike}</p>
+          <div className="text-center">
+            <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" href={selectedProgram.learnMoreLink}>
+              
+                Learn More
+              
+            </Link>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );

@@ -1,152 +1,157 @@
 import React from "react";
-import { FaChalkboardTeacher, FaBrain, FaHandsHelping, FaCertificate, FaPython, FaRobot, FaCode, FaCamera, FaNetworkWired, FaBook, FaTerminal, FaComments } from "react-icons/fa";
+import { RoughNotation } from "react-rough-notation";
+import {
+  FaChalkboardTeacher,
+  FaBrain,
+  FaHandsHelping,
+  FaCertificate,
+  FaPython,
+  FaRobot,
+  FaCamera,
+  FaNetworkWired,
+  FaBook,
+  FaTerminal,
+  FaComments,
+} from "react-icons/fa";
+import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
     <div className="bg-transparent py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-base font-semibold text-indigo-600">Why Choose Us</h2>
-        <p className="mx-auto mt-2 max-w-lg text-pretty text-center text-4xl font-medium tracking-tight text-white sm:text-5xl">
+        <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-medium tracking-tight text-white sm:text-5xl">
           The Ultimate AI and Machine Learning Experience
         </p>
-        <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-          {/* Item 1 - Larger Card */}
-          <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-              <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                <FaChalkboardTeacher className="text-indigo-600 text-4xl mb-4" />
-                <p className="mt-2 text-lg font-bold tracking-tight text-gray-950 max-lg:text-center">
-                  Be the leading Expert of AI
-                </p>
-                <p className="mt-2 max-w-lg text-sm text-gray-600 max-lg:text-center">
-                  Learn from the expert alumni from Microsoft and Wipro.
-                </p>
-                <ul className="mt-4 space-y-2">
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaPython className="text-indigo-600 mr-3" />
-                    Python
-                  </li>
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaBrain className="text-indigo-600 mr-3" />
-                    Deep Learning
-                  </li>
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaRobot className="text-indigo-600 mr-3" />
-                    Machine Learning
-                  </li>
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaCamera className="text-indigo-600 mr-3" />
-                    Computer Vision
-                  </li>
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaNetworkWired className="text-indigo-600 mr-3" />
-                    Neural Networks
-                  </li>
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaBook className="text-indigo-600 mr-3" />
-                    Hugging Face
-                  </li>
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaTerminal className="text-indigo-600 mr-3" />
-                    Prompt Engineering
-                  </li>
-                  <li className="flex items-center text-gray-700 text-sm">
-                    <FaComments className="text-indigo-600 mr-3" />
-                    NLP with Generative AI
-                  </li>
-                </ul>
-              </div>
-              <div className="relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                  <img
-                    className="size-full object-cover object-top"
-                    src="https://your-image-url-here"
-                    alt="AI and Machine Learning Masterclass"
-                  />
-                </div>
-              </div>
+
+        {/* CSS Grid Layout */}
+        <div className="grid gap-8 mt-10 lg:grid-cols-3 lg:grid-rows-2 sm:mt-16">
+          {/* First item - Main Content and Certificate Image */}
+          <div className="lg:col-span-2 flex flex-col justify-between p-8 bg-white rounded-lg shadow-lg">
+            <div>
+              <FaChalkboardTeacher className="text-indigo-600 text-4xl mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900">Be the Leading Expert of AI</h3>
+              <p className="mt-4 text-gray-600">Learn from expert alumni from Microsoft and Wipro.</p>
+              <ul className="mt-4 space-y-2 text-gray-700 text-sm">
+                <li className="flex items-center">
+                  <FaPython className="text-indigo-600 mr-3" />
+                  Python
+                </li>
+                <li className="flex items-center">
+                  <FaBrain className="text-indigo-600 mr-3" />
+                  Deep Learning
+                </li>
+                <li className="flex items-center">
+                  <FaRobot className="text-indigo-600 mr-3" />
+                  Machine Learning
+                </li>
+                <li className="flex items-center">
+                  <FaCamera className="text-indigo-600 mr-3" />
+                  Computer Vision
+                </li>
+                <li className="flex items-center">
+                  <FaNetworkWired className="text-indigo-600 mr-3" />
+                  Neural Networks
+                </li>
+                <li className="flex items-center">
+                  <FaBook className="text-indigo-600 mr-3" />
+                  Hugging Face
+                </li>
+                <li className="flex items-center">
+                  <FaTerminal className="text-indigo-600 mr-3" />
+                  Prompt Engineering
+                </li>
+                <li className="flex items-center">
+                  <FaComments className="text-indigo-600 mr-3" />
+                  NLP with Generative AI
+                </li>
+              </ul>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
+
+            <div className="mt-6">
+              <Image
+                src="/path-to-your-certificate-image.jpg"
+                alt="Certificate Preview"
+                width={700}
+                height={500}
+                objectFit="cover"
+                className="rounded-lg shadow-lg"
+              />
+            </div>
           </div>
 
-          {/* Item 2 */}
-          <div className="relative max-lg:row-start-1">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-              <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <FaHandsHelping className="text-indigo-600 text-4xl mb-4" />
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Get Industry ready with Dedicated Career Support
-                </p>
-                <ul className="list-disc ml-4 text-sm text-gray-600 max-lg:text-center">
-                  <li>Personalised Resume and LinkedIn Review</li>
-                  <li>Live career mentorship with industry experts</li>
-                  <li>Internship for Honors students</li>
-                </ul>
-              </div>
-              <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                <img
-                  className="w-full max-lg:max-w-xs"
-                  src="https://your-image-url-here"
-                  alt="Career Support"
-                />
-              </div>
+          {/* Second item - Career Support */}
+          <div className="flex flex-col p-8 bg-white rounded-lg shadow-lg">
+            <FaHandsHelping className="text-indigo-600 text-4xl mb-4" />
+            <h3 className="text-2xl font-bold text-gray-900">Get Industry Ready with Career Support</h3>
+            <ul className="mt-4 list-disc text-gray-600 ml-6">
+              <li>Resume review</li>
+              <li>LinkedIn Review</li>
+              <li>Live career mentorship with industry experts</li>
+              <li>Study from world's top Universities like Deakin University(Australia), University of Texas, MCCombs (U.S.) and IIT alumni</li>
+              <li>Internship opportunities for honors students</li>
+            </ul>
+            <div className="mt-6">
+              <Image
+                src="/path-to-career-support-image.jpg"
+                alt="Career Support"
+                width={500}
+                height={400}
+                style="cover"
+                className="rounded-lg shadow-lg"
+              />
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
           </div>
 
-          {/* Item 3 */}
-          <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-            <div className="absolute inset-px rounded-lg bg-white"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-              <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <FaBrain className="text-indigo-600 text-4xl mb-4" />
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Designed for busy career aspirants like you
-                </p>
-              </div>
-              <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-                <img
-                  className="h-[min(152px,40cqw)] object-cover object-center"
-                  src="https://your-image-url-here"
-                  alt="Career Aspirants"
-                />
-              </div>
+          {/* Third item - Busy Career Aspirants */}
+          <div className="flex flex-col p-8 bg-white rounded-lg shadow-lg">
+            <FaBrain className="text-indigo-600 text-4xl mb-4" />
+            <h3 className="text-2xl font-bold text-gray-900">Designed for Busy Career Aspirants</h3>
+            <p className="mt-4 text-gray-600">Our flexible learning paths are tailored to fit your schedule.</p>
+            <div className="mt-6">
+              <Image
+                src="/path-to-aspirants-image.jpg"
+                alt="Busy Career Aspirants"
+                width={500}
+                height={300}
+                style="cover"
+                className="rounded-lg shadow-lg"
+              />
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
           </div>
 
-          {/* Item 4 */}
-          <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-              <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                <FaCertificate className="text-indigo-600 text-4xl mb-4" />
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Get industry recognized certificates
-                </p>
-                <p className="mt-2 max-w-lg text-sm text-gray-600 max-lg:text-center">
-                  Upon completion, you’ll receive a certificate that’s recognized across industries.
-                </p>
-              </div>
-              <div className="relative min-h-[30rem] w-full grow">
-                <div className="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
-                  <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                    <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
-                      <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                        Certificate.jsx
-                      </div>
-                      <div className="border-r border-gray-600/10 px-4 py-2">Program.jsx</div>
-                    </div>
-                  </div>
-                  <div className="px-6 pb-14 pt-6">
-                    {/* Example certificate or achievement */}
-                  </div>
-                </div>
-              </div>
+          {/* Fourth item - Certificate */}
+          <div className="lg:col-span-2 flex flex-col justify-between p-8 bg-white rounded-lg shadow-lg">
+            <FaCertificate className="text-indigo-600 text-4xl mb-4" />
+            <h3 className="text-2xl font-bold text-gray-900">Get Industry-Recognized Certificates</h3>
+            <p className="mt-4 text-gray-600">
+              Upon completion, you will receive verifiable certificates recognized by top industries. 
+            </p>
+            <p className="mt-4 text-gray-600">
+  These certificates are <span className="font-bold">shareable</span>, and you can easily 
+  <RoughNotation type="underline" show={true} strokeWidth={2} color="indigo">
+    <span className="font-bold"> add them to your LinkedIn profile</span>
+  </RoughNotation>. 
+  Each certificate comes with a <span className="font-bold">unique ID</span> that makes it 
+  <RoughNotation type="underline" show={true} strokeWidth={2} color="indigo">
+    <span className="font-bold"> verifiable</span>
+  </RoughNotation>, ensuring credibility with future employers or institutions.
+</p>
+
+            <div className="mt-6">
+               {/* Rough Notation Box around Image */}
+             <RoughNotation type="box" strokeWidth={2} color="indigo" show={true} padding={10}>
+              <Image
+                src="/assets/cert-img.jpg"
+                alt="Industry Certificate"
+                width={700}
+                height={500}
+                style="cover"
+                quality={75}
+                className="rounded-lg shadow-lg"
+              />
+              </RoughNotation>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
           </div>
         </div>
       </div>

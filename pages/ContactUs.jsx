@@ -1,13 +1,16 @@
 import { useState } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'; // Make sure to import the phone input styles
 import workExperienceOptions from '../data/workExperienceOptions.json';
-import countrycodes from '../data/countryCodes.json'
+import pricingPlans from '../data/pricingPlans.json'; // Import pricing plans for Career Path
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
     phone: '',
+    careerPath: '',
+    message: '',
     workExperience: ''
   });
 
@@ -18,14 +21,16 @@ const ContactUs = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Formspree endpoint URL
-    const formspreeEndpoint = 'https://formspree.io/f/your-form-id';
-
-    // Send form data to Formspree
-    const response = await fetch(formspreeEndpoint, {
+    // SendGrid API integration (Replace with your API endpoint)
+    const sendGridApiEndpoint = '/api/sendEmail'; // This will be your SendGrid API route
+    const response = await fetch(sendGridApiEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,21 +39,22 @@ const ContactUs = () => {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
+        careerPath: formData.careerPath,
         message: formData.message,
         workExperience: formData.workExperience
       }),
     });
 
-    // If form submission is successful, show the popup
     if (response.ok) {
-      setSubmitted(true); // Show the thank-you popup
+      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
-        message: '',
         phone: '',
+        careerPath: '',
+        message: '',
         workExperience: ''
-      }); // Clear the form
+      });
     } else {
       alert('Something went wrong. Please try again.');
     }
@@ -56,7 +62,7 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-transparent p-6">
-      <h1 className="text-4xl font-bold text-white mb-8">Become AI expert : Start Here</h1>
+      <h1 className="text-4xl font-bold text-white mb-8">Become an AI expert: Start Here</h1>
 
       {/* Thank you popup */}
       {submitted && (
@@ -74,7 +80,7 @@ const ContactUs = () => {
         </div>
       )}
 
-      <form 
+      <form
         className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full"
         onSubmit={handleSubmit}
       >
@@ -112,40 +118,44 @@ const ContactUs = () => {
           />
         </div>
 
-        {/* Phone Number Input with Country dial_code */}
+        {/* Phone Input using react-phone-input-2 */}
         <div className="mb-4">
           <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
             Phone Number
           </label>
-          <div className="flex">
-            {/* Country dial_code Dropdown */}
-            <select
-              id="countrydial_code"
-              name="countrydial_code"
-              value={formData.countrydial_code}
-              onChange={handleChange}
-              required
-              className="shadow appearance-none border rounded-l w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600"
-            >
-              <option value="" disabled>Select</option>
-              {countrycodes.map((country) => (
-                <option key={country.dial_code} value={country.dial_code}>
-                  {country.emoji} ({country.dial_code})
-                </option>
-              ))}
-            </select>
-            {/* Phone Number Input */}
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              placeholder="Phone Number"
-              className="shadow appearance-none border rounded-r w-3/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600"
-            />
-          </div>
+          <PhoneInput
+            country={'in'} // Default to India
+            value={formData.phone}
+            onChange={handlePhoneChange}
+            inputClass="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600"
+            inputProps={{
+              name: 'phone',
+              required: true,
+              autoFocus: true,
+            }}
+          />
+        </div>
+
+        {/* Career Path Dropdown */}
+        <div className="mb-4">
+          <label htmlFor="careerPath" className="block text-gray-700 text-sm font-bold mb-2">
+            Career Path
+          </label>
+          <select
+            id="careerPath"
+            name="careerPath"
+            value={formData.careerPath}
+            onChange={handleChange}
+            required
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600"
+          >
+            <option value="" disabled>Select Career Path</option>
+            {pricingPlans.map((plan) => (
+              <option key={plan.title} value={plan.title}>
+                {plan.title}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Work Experience Dropdown */}
