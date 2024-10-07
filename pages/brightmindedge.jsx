@@ -321,13 +321,13 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="lg:col-span-2 flex flex-col justify-between p-8 bg-white rounded-lg shadow-lg"
+            className="lg:col-span-2 flex flex-col justify-between p-2 bg-white rounded-lg shadow-lg"
           >
-            <FaCertificate className="text-indigo-600 text-4xl mb-4" />
+            <FaCertificate className="text-indigo-600 text-4xl mb-2" />
             <h3 className="text-2xl font-bold text-gray-900">
               Industry-Recognized Certificates
             </h3>
-            <p className="mt-4 text-gray-600">
+            <p className="mt-2 text-gray-600">
               Upon completion, you will receive verifiable certificates
               recognized by top industries, and you can easily{" "}
               <RoughNotation
@@ -341,7 +341,7 @@ export default function WhyChooseUs() {
               . Each certificate comes with a{" "}
               <span className="font-bold">unique ID</span> for verification.
             </p>
-            <div className="mt-6">
+            <div className="mt-2">
               <RoughNotation
                 type="box"
                 strokeWidth={2}
@@ -362,13 +362,13 @@ export default function WhyChooseUs() {
             </div>
           </motion.div>
 		  {/* Be the Leading Expert of AI (now swapped to second) */}
-          <div className="flex flex-col justify-between p-8 bg-white rounded-lg shadow-lg">
+          <div className="flex flex-col justify-between p-2 bg-white rounded-lg shadow-lg">
             <div>
-              <FaChalkboardTeacher className="text-indigo-600 text-4xl mb-4" />
+              <FaChalkboardTeacher className="text-indigo-600 text-4xl mb-2" />
               <h3 className="text-2xl font-bold text-gray-900">
                 Be the Leading Expert of AI
               </h3>
-              <p className="mt-4 text-gray-600">
+              <p className="mt-2 text-gray-600">
                 Master the most sought-after skills in AI and machine learning,
                 taught by industry professionals who are shaping the future of
                 technology. Our hands-on approach ensures you don’t just learn
@@ -402,8 +402,6 @@ export default function WhyChooseUs() {
               </ul>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>

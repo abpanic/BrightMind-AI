@@ -5,12 +5,12 @@ export default function DataAnalyst() {
   return (
     <>
       <Head>
-        <title>Data Analyst Associate | BrightMind AI</title>
+        <title>Data Analyst | BrightMind AI</title>
         <meta name="description" content="Learn in-demand data analytics skills with our Data Analyst Associate course. Enroll today to gain practical, marketable data skills." />
       </Head>
 
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mt-8">Data Analytics Professional Certificate</h1>
+        <h1 className="text-3xl font-bold mt-8">Data Analytics Career Path</h1>
         <p className="mt-2 text-lg">
           Learn in-demand skills like statistical analysis, Python, regression models, and
           machine learning in less than 6 months. Enroll today.
