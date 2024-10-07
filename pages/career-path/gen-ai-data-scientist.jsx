@@ -27,7 +27,7 @@ export default function DataScientist() {
         {/* Other sections like "Outcomes", "Courses", and "Testimonials" */}
 
         <div className="mt-8">
-          <Link href="/enrollment"           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <Link href="/ContactUs" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Enroll Now
             
           </Link>

@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { FaRobot, FaNetworkWired, FaBrain, FaChartLine, FaCogs, FaTree, FaProjectDiagram, FaCode, FaLightbulb, FaMicroscope, FaLayerGroup, FaChartBar } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+{/*https://www.coursera.org/career-paths/ibm-machine-learning*/}
+{/*https://www.coursera.org/specializations/machine-learning-introduction*/}
+{/*https://www.coursera.org/specializations/machine-learning-introduction*/}
 export default function MachineLearningEngineer() {
   return (
     <>
