@@ -216,8 +216,6 @@ export default function WhyChooseUs() {
         </motion.div>
       </div>
     </motion.div>
-	</div>
-
           
 
           {/* Flexible Payments */}
@@ -225,7 +223,7 @@ export default function WhyChooseUs() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col p-4 bg-white rounded-lg shadow-lg"
+      className="flex flex-col p-4 bg-gradient-to-r from-purple-20 via-white to-purple-70 rounded-lg shadow-lg"
     >
       <FaCreditCard className="text-indigo-600 text-4xl mb-4" />
       <h3 className="text-2xl font-bold text-gray-900">
@@ -244,7 +242,7 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col p-4 bg-white rounded-lg shadow-lg"
+            className="flex flex-col p-4 bg-gradient-to-r from-indigo-50 via-white to-indigo-50 rounded-lg shadow-lg"
           >
             <FaUserTie className="text-indigo-600 text-4xl mb-4" />
             <h3 className="text-2xl font-bold text-gray-900">
@@ -316,6 +314,7 @@ export default function WhyChooseUs() {
               contribute immediately to your organization's success.
             </p>
           </motion.div>
+          </div>
 
           {/* Certificate Section */}
           <motion.div
