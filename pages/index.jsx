@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
 import Programs from '../components/Programs'
-import WhyChooseUs from './whychooseus'
+import BrightMindEdge from './brightmindedge'
 import PopularCourses from '../components/PopularCourses'
 import FAQ from './FAQ'
 
@@ -16,7 +16,7 @@ const Home = () => {
       </Head>
       <Hero />
       <Programs />
-      <WhyChooseUs />      
+      <BrightMindEdge />      
       {/*<PopularCourses />  */}
     </div>
   )

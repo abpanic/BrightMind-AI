@@ -24,14 +24,11 @@ import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
+    <div className="bg-transparent py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold text-indigo-500">
-          Why Choose Us
-        </h2>
-        <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          The Ultimate AI and Machine Learning Experience
-        </p>
+        <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text mb-6">
+        Your Competitive Advantage
+        </h1>
 
         {/* Grid Layout */}
         <div className="grid gap-8 mt-10 lg:grid-cols-3 lg:grid-rows-2 sm:mt-16">
