@@ -88,7 +88,7 @@ const JobCarousel = () => {
 
       {/* Key Features */}
       <p className="text-lg text-gray-200 text-center mt-4">
-        Unlock your potential with personalized mentorship, industry projects, and interview assistance designed to help you excel in the AI & Data Science fields.
+        Unlock your potential with personalized mentorship, industry projects, and interview assistance designed to help you excel in Deep Technology fields.
       </p>
 
       {/* Call-to-Action */}
@@ -104,15 +104,15 @@ const JobCarousel = () => {
       <div className="flex justify-center gap-8 items-center pt-6">
         <div className="flex flex-col items-center">
           <p className="text-3xl font-bold text-[#F6B042]">1:1 Mentorship</p>
-          <p className="text-sm text-gray-300">With AI Experts</p>
+          <p className="text-sm text-gray-300">With Technology Experts</p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-3xl font-bold text-[#F6B042]">200+ Hrs</p>
-          <p className="text-sm text-gray-300">Comprehensive Learning</p>
+          <p className="text-3xl font-bold text-[#F6B042]">5+</p>
+          <p className="text-sm text-gray-300">Technical Interviews</p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-3xl font-bold text-[#F6B042]">10+</p>
-          <p className="text-sm text-gray-300">Real-World Projects</p>
+          <p className="text-3xl font-bold text-[#F6B042]">43+</p>
+          <p className="text-sm text-gray-300">Industry Projects</p>
         </div>
         <div className="flex flex-col items-center">
           <p className="text-3xl font-bold text-[#F6B042]">100%</p>
