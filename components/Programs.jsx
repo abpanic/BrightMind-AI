@@ -69,13 +69,18 @@ const Programs = () => {
         {selectedProgram && (
           <>
             <h2 className="text-3xl font-bold text-center">{selectedProgram.title}</h2>
-            <p className="text-xl text-center">Price: ₹{selectedProgram.price.toLocaleString()}/month
-            <span className="flash">🪔Diwali Offer!</span>
-            </p>
+            <p className="text-xl text-center">
+  Price: ₹{(selectedProgram.price * 10).toLocaleString()} or ₹{selectedProgram.price.toLocaleString()}/month</p>
+            <span className="flash">🪔Lower Price for Diwali!</span>
+            
 
             <p className="text-gray-800 text-center">{selectedProgram.intro}</p>
             <p className="text-gray-800 text-center">{selectedProgram.ifYouLike}</p>
             <div className="flex justify-end space-x-4 mt-4">
+            <Link href={selectedProgram.learnMoreLink}
+                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                  Know More                
+              </Link>
               <Link href="/ContactUs"
                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
                   Enroll Now                
