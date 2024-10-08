@@ -77,3 +77,16 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/*Flashing Pop-ups*/
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.flash {
+  animation: flash 1.5s infinite; /* Flash animation every 1.5 seconds */
+  color: red; /* Flash text in red to make it stand out */
+  font-weight: bold; /* Make the text bold */
+}
+
