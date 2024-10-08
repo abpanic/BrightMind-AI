@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Hero from '../components/Hero'
 import Programs from '../components/Programs'
 import BrightMindEdge from './brightmindedge'
-import PopularCourses from '../components/PopularCourses'
-import FAQ from './FAQ'
 
 const Home = () => {
   return (
@@ -16,8 +14,8 @@ const Home = () => {
       </Head>
       <Hero />
       <Programs />
-      <BrightMindEdge />      
-      {/*<PopularCourses />  */}
+      <BrightMindEdge />    
+      
     </div>
   )
 }

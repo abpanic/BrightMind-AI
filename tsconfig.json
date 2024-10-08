@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/pricing.tsx", "components/NavBar-old.tsx", "components/NavBar.jsx", "pages/brightmindedge.jsx", "components/Footerold", "components/Hero.jsx", "components/PopularCourses.jsx", "components/Programs.jsx", "pages/_app.jsx", "pages/index.jsx", "pages/programs.jsx", "components/libs/utils.js", "tailwind.config.js", "components/ui/bento-grid.jsx", "components/hooks/use-outside-click.js", "components/ui/apple-cards-carousel.jsx"  ],
+, "pages/pricing.tsx", "components/NavBar-old.tsx", "components/NavBar.jsx", "pages/brightmindedge.jsx", "components/Footerold", "components/Hero.jsx", "components/PopularCoursesold", "components/Programs.jsx", "pages/_app.jsx", "pages/index.jsx", "pages/programs.jsx", "components/libs/utils.js", "tailwind.config.js", "components/ui/bento-grid.jsx", "components/hooks/use-outside-click.js", "components/ui/apple-cards-carousel.jsx"  ],
   "exclude": [
     "node_modules"
   ]

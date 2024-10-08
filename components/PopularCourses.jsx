@@ -1,103 +1,143 @@
-import React from "react";
-import { IoIosArrowForward } from "react-icons/io";
-import { HiOutlineArrowUpRight } from "react-icons/hi2";
+"use client";
+import React, { useState } from "react";
+import styles from "../styles/carousel.module.scss";
 import Image from "next/image";
+import previousDisabled from "../public/images/previous-disabled.svg";
+import previousEnabled from "../public/images/previous-enabled.svg";
+import nextDisabled from "../public/images/next-disabled.svg";
+import nextEnabled from "../public/images/next-enabled.svg";
+import { motion } from "framer-motion";
+import PricingPlan from "../data/pricingPlans.json";
 
-const PopularCourses = () => {
-  const service = [
-    {
-      img: "/assets/figma.svg",
-      title: "Figma UI/UX Design",
-      sub: "Lessons on design that cover the most recent developments.",
-      promo: "design",
-      rating: "4.5",
+const Carousel = () => {
+  // image index state
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // transition direction state
+  const [transitionDirection, setTransitionDirection] = useState("next");
+
+  // function to handle next button click
+  const handleNext = () => {
+    setTransitionDirection("next");
+    setActiveIndex((prevIndex) =>
+      prevIndex === PricingPlan.length - 1 ? prevIndex : prevIndex + 1
+    );
+  };
+
+  // function to handle previous button click
+  const handlePrevious = () => {
+    setTransitionDirection("previous");
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? prevIndex : prevIndex - 1
+    );
+  };
+
+  // defining text animation
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      x: transitionDirection === "next" ? 100 : -100,
+      transition: { duration: 0.5, ease: "easeInOut" },
     },
-    {
-      img: "/assets/learn.svg",
-      title: "Full Stack Web Development",
-      sub: "Start from basic to advanced for Full Stack.",
-      promo: "development",
-      rating: "4.5",
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeInOut" },
     },
-    {
-      img: "/assets/code.svg",
-      title: "Marketing",
-      sub: "Lessons on design that cover the most recent developments.",
-      promo: "marketing",
-      rating: "4.5",
+  };
+
+  // defining stagger text effect
+  const textContainerVariant = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.1 },
     },
-  ];
+  };
 
   return (
-    <div className="container mx-auto md:h-screen py-10">
-      <p className="text-lg text-purple-500 font-medium">Explore Programs</p>
-      <p className="text-3xl font-semibold py-3">Our Most Popular Class</p>
-      <p className="text-grey-500 text-base py-3">
-        Join our famous classes, and gain knowledge that will be useful for your
-        career.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-12 py-10">
-        {service.map((ser, i) => (
-          <div
-            className="px-6 py-4 rounded-xl bg-gray-50 shadow-lg border border-gray-200 hover:bg-purple-600 group"
-            key={i}
+    <div className={styles.carouselContainer}>
+      <motion.div
+        className={styles.contentContainer}
+        key={activeIndex}
+        variants={textContainerVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className={styles.titleContainer}>
+          <motion.h1 variants={textVariants}>
+            {PricingPlan[activeIndex].title}
+          </motion.h1>
+        </div>
+        <div className={styles.descriptionContainer}>
+          <motion.p variants={textVariants}>
+            {PricingPlan[activeIndex].intro}
+          </motion.p>
+        </div>
+        <div className={styles.buttonContainer}>
+          <button>Learn More</button>
+        </div>
+      </motion.div>
+      <div className={styles.imagesContainer}>
+        {PricingPlan.map((plan, index) => (
+          <motion.div
+            key={index}
+            className={styles[`imageContainer${index}`]} // You can style these containers dynamically in SCSS
+            animate={{
+              opacity: activeIndex === index ? 1 : 0.5,
+              x: activeIndex === index ? "0" : "96px",
+              scale: activeIndex === index ? 1 : 0.8,
+            }}
+            transition={{
+              duration: 0.5, // Animation duration in seconds
+              ease: "easeInOut", // Easing function for the animation
+            }}
           >
             <Image
-              className="w-full"
-              src={ser.img}
-              alt="services"
-              width={60}
-              height={60}
+              className={styles[`image${index}`]}
+              alt={plan.alt}
+              src={plan.image}
+              width={500} // adjust size as needed
+              height={500} // adjust size as needed
             />
-            <p className="text-lg text-purple-600 group-hover:text-grey capitalize py-2">
-              {ser.promo}
-            </p>
-            <div className="flex justify-between items-center">
-              <p className="text-2xl group-hover:text-grey font-semibold line-clamp-1">
-                {ser.title}
-              </p>
-              <HiOutlineArrowUpRight className="group-hover:text-grey text-lg font-semibold" />
-            </div>
-
-            <p className="text-base group-hover:text-grey pr-6 py-2">
-              {ser.sub}
-            </p>
-            <div className="flex items-center gap-2 group-hover:text-grey">
-              <p>{ser.rating}</p>
-              <Image
-                src="/assets/star.svg"
-                alt="star"
-                width={20}
-                height={20}
-                style={{ width: 'auto', height: 'auto' }}
-              />
-              <p>123</p>
-            </div>
-            <div className="flex justify-between py-2">
-              <div className="flex gap-3">
-                <Image
-                  src="/assets/person.svg"
-                  alt="person"
-                  width={30}
-                  height={30}
-                  style={{ width: 'auto', height: 'auto' }}
-                />
-                <div className="flex flex-col">
-                  <p className="text-sm group-hover:text-grey">Jimmy</p>
-                  <p className="text-xs text-grey-500 group-hover:text-grey">
-                    200 Enrolled
-                  </p>
-                </div>
-              </div>
-              <p className="text-xl text-purple-600 group-hover:text-grey font-semibold">
-                $13.45
-              </p>
-            </div>
-          </div>
+          </motion.div>
         ))}
+        <div className={styles.controls}>
+          <button
+            className={
+              activeIndex !== 0
+                ? `${styles.previousContainer}`
+                : `${styles.disabled}`
+            }
+            onClick={handlePrevious}
+          >
+            <Image
+              src={activeIndex !== 0 ? previousEnabled : previousDisabled}
+              alt="previous icon"
+              className={styles.previous}
+            />
+          </button>
+          <button
+            className={
+              activeIndex !== PricingPlan.length - 1
+                ? `${styles.nextContainer}`
+                : `${styles.disabled}`
+            }
+            onClick={handleNext}
+          >
+            <Image
+              src={
+                activeIndex !== PricingPlan.length - 1
+                  ? nextEnabled
+                  : nextDisabled
+              }
+              alt="next icon"
+              className={styles.next}
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default PopularCourses;
+export default Carousel;

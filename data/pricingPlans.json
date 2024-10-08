@@ -1,6 +1,6 @@
 [
   {
-    "title": "Data Analyst Associate",
+    "title": "Associate Data Analyst",
     "price": 1500,
     "image": "/assets/DataAnalyst.png",
     "alt": "Data Analyst",
@@ -14,7 +14,7 @@
       "Statistics": true,
       "DataVisualization": true,
       "Excel": true,
-      "PowerBI": true,  
+      "PowerBI": true,
       "Projects": "Small Datasets",
       "MachineLearning": "None",
       "DeepLearning": false,
@@ -46,7 +46,7 @@
       "Statistics": true,
       "DataVisualization": true,
       "Excel": true,
-      "PowerBI": true,  
+      "PowerBI": true,
       "Projects": "Industry Datasets",
       "MachineLearning": "Supervised, Unsupervised Learning",
       "DeepLearning": true,
@@ -59,8 +59,8 @@
       "Certificate": true
     },
     "careerTitles": [
-      "Data Scientist",
-      "Artificial Intelligence Specialist"
+      "Data Analyst",
+      "Business Analyst"
     ]
   },
   {
@@ -78,7 +78,7 @@
       "Statistics": true,
       "DataVisualization": true,
       "Excel": true,
-      "PowerBI": true,  
+      "PowerBI": true,
       "Projects": "Complex Datasets",
       "MachineLearning": "Supervised, Unsupervised Learning, Reinforcement Learning, AutoML",
       "DeepLearning": true,
@@ -111,7 +111,7 @@
       "Statistics": true,
       "DataVisualization": true,
       "Excel": true,
-      "PowerBI": true,  
+      "PowerBI": true,
       "Projects": "Complex Industry Datasets",
       "MachineLearning": "Supervised, Unsupervised, Reinforcement Learning, AutoML",
       "DeepLearning": true,
@@ -119,15 +119,47 @@
       "ComputerVision": true,
       "MLOps": "Advanced with CI/CD",
       "GenAI": "Full Stack Development, Advanced Techniques",
-      "DataEthicsAndPrivacy": true,  
+      "DataEthicsAndPrivacy": true,
       "DedicatedProgramManager": true,
       "Internship": true,
       "Certificate": true
     },
     "careerTitles": [
-      "Software Engineer",
+      "Gen AI Scientist",
       "AI Engineer",
       "Data Scientist"
+    ]
+  },
+  {
+    "title": "Data Structure & Algorithms with System Design",
+    "price": 2000,
+    "image": "/assets/SoftwareEngineer.jpg",
+    "alt": "Software Engineer Basics",
+    "duration": "7 months",
+    "intro": "Learn the basics of software engineering, focusing on Data Structures and Algorithms (DSA) and System Design to build a strong foundation.",
+    "ifYouLike": "solving coding problems, designing scalable systems, understanding algorithms",
+    "learnMoreLink": "/career-paths/software-engineer-basics",
+    "features": {
+      "Python": true,
+      "SQL": false,
+      "Statistics": false,
+      "DataVisualization": false,
+      "Excel": false,
+      "PowerBI": false,
+      "Projects": "Coding Challenges",
+      "MachineLearning": "None",
+      "DeepLearning": false,
+      "NaturalLanguageProcessing": false,
+      "ComputerVision": false,
+      "MLOps": false,
+      "GenAI": "None",
+      "DedicatedProgramManager": false,
+      "Internship": false,
+      "Certificate": true
+    },
+    "careerTitles": [
+      "Software Engineer",
+      "System Design Associate"
     ]
   }
 ]

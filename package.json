@@ -27,6 +27,7 @@
     "react-phone-input-2": "^2.15.1",
     "react-responsive-carousel": "^3.2.23",
     "react-rough-notation": "^1.0.5",
+    "sass": "^1.79.4",
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {

@@ -20,11 +20,11 @@ const Programs = () => {
     visible: { opacity: 1, transition: { duration: 0.5 } }
   };
 
-  // Map pricing plans to cards
+  // Map pricing plans to cards with consistent width and height
   const cards = pricingPlans.map((program, index) => (
     <motion.div
       key={index}
-      className="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+      className="max-w-sm w-[300px] h-[450px] bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
       initial="hidden"
       animate="visible"
       variants={fadeIn}
@@ -51,7 +51,7 @@ const Programs = () => {
       <Carousel items={cards} />
       {selectedProgram && (
         <motion.div
-          className="mt-10 p-6 bg-white rounded-lg shadow-lg"
+          className="mt-10 p-6 bg-white rounded-lg shadow-lg max-w-lg mx-auto"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
@@ -62,9 +62,7 @@ const Programs = () => {
           <p className="text-gray-800 text-center mb-4">If you like: {selectedProgram.ifYouLike}</p>
           <div className="text-center">
             <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" href={selectedProgram.learnMoreLink}>
-              
-                Learn More
-              
+              Learn More
             </Link>
           </div>
         </motion.div>

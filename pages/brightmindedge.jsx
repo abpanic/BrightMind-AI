@@ -190,7 +190,7 @@ export default function WhyChooseUs() {
             >
               <span className="font-bold text-orange-600">IIT alumni</span>
             </RoughNotation>
-            bring their unparalleled expertise from India’s premier technology institutions, known for producing some of the brightest minds in engineering and data science. Their experience in both academia and industry provides you with a unique, practical learning experience.
+             bring their unparalleled expertise from India’s premier technology institutions, known for producing some of the brightest minds in engineering and data science. Their experience in both academia and industry provides you with a unique, practical learning experience.
           </p>
         </motion.div>
 
@@ -361,7 +361,7 @@ export default function WhyChooseUs() {
               </RoughNotation>
             </div>
           </motion.div>
-		  {/* Be the Leading Expert of AI (now swapped to second) */}
+		  {/* Be the Leading Expert of AI */}
           <div className="flex flex-col justify-between p-2 bg-white rounded-lg shadow-lg">
             <div>
               <FaChalkboardTeacher className="text-indigo-600 text-4xl mb-2" />
@@ -378,25 +378,18 @@ export default function WhyChooseUs() {
               </p>
               <ul className="mt-4 space-y-2 text-gray-700 text-sm">
                 {[
-                  { icon: FaPython, label: "Python", color: "blue" },
-                  { icon: FaBrain, label: "Deep Learning", color: "green" },
-                  { icon: FaRobot, label: "Machine Learning", color: "red" },
-                  { icon: FaCamera, label: "Computer Vision", color: "purple" },
-                  { icon: FaNetworkWired, label: "Neural Networks", color: "orange" },
-                  { icon: FaBook, label: "Hugging Face", color: "teal" },
-                  { icon: FaTerminal, label: "Prompt Engineering", color: "pink" },
-                  { icon: FaComments, label: "NLP with Generative AI", color: "yellow" },
+                  { icon: FaPython, label: "Python" },
+                  { icon: FaBrain, label: "Deep Learning"},
+                  { icon: FaRobot, label: "Machine Learning" },
+                  { icon: FaCamera, label: "Computer Vision" },
+                  { icon: FaNetworkWired, label: "Neural Networks" },
+                  { icon: FaBook, label: "Hugging Face"},
+                  { icon: FaTerminal, label: "Prompt Engineering" },
+                  { icon: FaComments, label: "NLP with Generative AI" },
                 ].map((item, index) => (
                   <li key={index} className="flex items-center">
-                    <item.icon className="text-indigo-600 mr-3" />
-                    <RoughNotation
-                      type="underline"
-                      show={true}
-                      strokeWidth={2}
-                      color={item.color}
-                    >
-                      {item.label}
-                    </RoughNotation>
+                    <item.icon className="text-indigo-600 mr-3" />                
+                  {item.label}
                   </li>
                 ))}
               </ul>
