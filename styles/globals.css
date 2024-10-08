@@ -14,7 +14,7 @@ html, body {
 
 
 body {
-  background-image: url('/background.png');
+  background-image: url('/background.avif');
   background-repeat: no-repeat;
   background-size: cover; /* This ensures the image covers the entire page */
   background-position: center;

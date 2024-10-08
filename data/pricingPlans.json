@@ -8,24 +8,6 @@
     "intro": "Advanced data analysts and data scientists are responsible for collecting, analyzing, and interpreting extremely large amounts of data within organizations.",
     "ifYouLike": "exploring data, building models, finding insights",
     "learnMoreLink": "/career-paths/data-analyst-associate",
-    "features": {
-      "Python": true,
-      "SQL": true,
-      "Statistics": true,
-      "DataVisualization": true,
-      "Excel": true,
-      "PowerBI": true,
-      "Projects": "Small Datasets",
-      "MachineLearning": "None",
-      "DeepLearning": false,
-      "NaturalLanguageProcessing": false,
-      "ComputerVision": false,
-      "MLOps": false,
-      "GenAI": "None",
-      "DedicatedProgramManager": false,
-      "Internship": false,
-      "Certificate": true
-    },
     "careerTitles": [
       "Junior Business Analyst",
       "Junior Data Analyst"
@@ -39,25 +21,7 @@
     "duration": "6 months",
     "intro": "Gain the advanced knowledge to work with real-world datasets and improve business insights using machine learning models.",
     "ifYouLike": "analyzing data, building visualizations, solving business problems",
-    "learnMoreLink": "/career-paths/data-analyst",
-    "features": {
-      "Python": true,
-      "SQL": true,
-      "Statistics": true,
-      "DataVisualization": true,
-      "Excel": true,
-      "PowerBI": true,
-      "Projects": "Industry Datasets",
-      "MachineLearning": "Supervised, Unsupervised Learning",
-      "DeepLearning": true,
-      "NaturalLanguageProcessing": true,
-      "ComputerVision": true,
-      "MLOps": "Intermediate",
-      "GenAI": "Advanced",
-      "DedicatedProgramManager": false,
-      "Internship": false,
-      "Certificate": true
-    },
+    "learnMoreLink": "/career-paths/data-analyst",    
     "careerTitles": [
       "Data Analyst",
       "Business Analyst"
@@ -71,63 +35,24 @@
     "duration": "12 months",
     "intro": "Master machine learning concepts and techniques to build scalable models and contribute to AI projects.",
     "ifYouLike": "working on machine learning algorithms, solving complex data problems",
-    "learnMoreLink": "/career-paths/machine-learning-engineer",
-    "features": {
-      "Python": true,
-      "SQL": true,
-      "Statistics": true,
-      "DataVisualization": true,
-      "Excel": true,
-      "PowerBI": true,
-      "Projects": "Complex Datasets",
-      "MachineLearning": "Supervised, Unsupervised Learning, Reinforcement Learning, AutoML",
-      "DeepLearning": true,
-      "NaturalLanguageProcessing": true,
-      "ComputerVision": true,
-      "MLOps": "Advanced with CI/CD",
-      "GenAI": "Intermediate Techniques",
-      "DedicatedProgramManager": true,
-      "Internship": true,
-      "Certificate": true
-    },
+    "learnMoreLink": "/career-paths/machine-learning-engineer",   
     "careerTitles": [
-      "Machine Learning Engineer",
-      "AI Engineer",
+      "Machine Learning Engineer",      
       "Data Scientist"
     ]
   },
   {
-    "title": "Gen AI & Data Scientist",
+    "title": "Data Scientist with LLM",
     "price": 37500,
     "image": "/assets/GenAIScientist.jpg",
     "alt": "Gen-AI Scientist",
     "duration": "12 months",
     "intro": "Become a leader in the field of artificial intelligence with advanced knowledge of machine learning, deep learning, and generative AI technologies.",
     "ifYouLike": "working with AI systems, creating models, developing full-stack AI solutions",
-    "learnMoreLink": "/career-paths/gen-ai-data-scientist",
-    "features": {
-      "Python": true,
-      "SQL": true,
-      "Statistics": true,
-      "DataVisualization": true,
-      "Excel": true,
-      "PowerBI": true,
-      "Projects": "Complex Industry Datasets",
-      "MachineLearning": "Supervised, Unsupervised, Reinforcement Learning, AutoML",
-      "DeepLearning": true,
-      "NaturalLanguageProcessing": true,
-      "ComputerVision": true,
-      "MLOps": "Advanced with CI/CD",
-      "GenAI": "Full Stack Development, Advanced Techniques",
-      "DataEthicsAndPrivacy": true,
-      "DedicatedProgramManager": true,
-      "Internship": true,
-      "Certificate": true
-    },
+    "learnMoreLink": "/career-paths/gen-ai-data-scientist",    
     "careerTitles": [
-      "Gen AI Scientist",
-      "AI Engineer",
-      "Data Scientist"
+      "Gen AI Scientist",      
+      "Lead Data Scientist"
     ]
   },
   {
@@ -138,28 +63,9 @@
     "duration": "7 months",
     "intro": "Learn the basics of software engineering, focusing on Data Structures and Algorithms (DSA) and System Design to build a strong foundation.",
     "ifYouLike": "solving coding problems, designing scalable systems, understanding algorithms",
-    "learnMoreLink": "/career-paths/software-engineer-basics",
-    "features": {
-      "Python": true,
-      "SQL": false,
-      "Statistics": false,
-      "DataVisualization": false,
-      "Excel": false,
-      "PowerBI": false,
-      "Projects": "Coding Challenges",
-      "MachineLearning": "None",
-      "DeepLearning": false,
-      "NaturalLanguageProcessing": false,
-      "ComputerVision": false,
-      "MLOps": false,
-      "GenAI": "None",
-      "DedicatedProgramManager": false,
-      "Internship": false,
-      "Certificate": true
-    },
+    "learnMoreLink": "/career-paths/software-engineer-basics",   
     "careerTitles": [
-      "Software Engineer",
-      "System Design Associate"
+      "Software Engineer"      
     ]
   }
 ]

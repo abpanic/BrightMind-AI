@@ -1,41 +1,52 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Carousel, Card } from "../components/ui/apple-cards-carousel";
-import Link from "next/link";
+import { Carousel } from "../components/ui/apple-cards-carousel";
+import Modal from 'react-modal';
 import { motion } from "framer-motion";
+import Link from "next/link"; 
+
+Modal.setAppElement('#__next'); // Use the root element of your application
 
 const Programs = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [pricingPlans, setPricingPlans] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
-    // Fetch the pricing plans from a JSON file or a backend API
     import('../data/pricingPlans.json')
       .then((data) => setPricingPlans(data.default))
       .catch((error) => console.error('Failed to load pricing plans:', error));
   }, []);
 
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5 } }
+  const openModal = (program) => {
+    setSelectedProgram(program);
+    setModalIsOpen(true);
   };
 
-  // Map pricing plans to cards with consistent width and height
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   const cards = pricingPlans.map((program, index) => (
     <motion.div
       key={index}
       className="max-w-sm w-[300px] h-[450px] bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
       initial="hidden"
       animate="visible"
-      variants={fadeIn}
     >
       <img className="w-full h-48 object-cover" src={program.image || "/assets/default-image.webp"} alt={program.title} />
       <div className="p-6">
-        <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">{program.title}</h3>
-        <p className="text-gray-700 text-center mb-4">Price: ₹{program.price.toLocaleString()}/month</p>
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">{program.title}</h2>
+        <p className="text-gray-700 text-center mb-4 font-semibold">Plan your Career for:
+<ul className="text-gray-700 text-center list-none font-normal">
+  {program.careerTitles.map((title, index) => (
+    <li key={index}>• {title}</li>
+  ))}
+</ul></p>
+
         <button
           className="block bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-md mx-auto hover:from-pink-500 hover:to-purple-500 transition-colors"
-          onClick={() => setSelectedProgram(program)}
+          onClick={() => openModal(program)}
         >
           Learn More
         </button>
@@ -49,24 +60,31 @@ const Programs = () => {
         Career Paths
       </h1>
       <Carousel items={cards} />
-      {selectedProgram && (
-        <motion.div
-          className="mt-10 p-6 bg-white rounded-lg shadow-lg max-w-lg mx-auto"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-        >
-          <h2 className="text-3xl font-bold text-center mb-4">{selectedProgram.title}</h2>
-          <p className="text-xl font-semibold text-center mb-4">Price: ₹{selectedProgram.price.toLocaleString()}/month</p>
-          <p className="text-gray-800 text-center mb-4">{selectedProgram.intro}</p>
-          <p className="text-gray-800 text-center mb-4">If you like: {selectedProgram.ifYouLike}</p>
-          <div className="text-center">
-            <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" href={selectedProgram.learnMoreLink}>
-              Learn More
-            </Link>
-          </div>
-        </motion.div>
-      )}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Program Details"
+        className="bg-white rounded-lg p-6 mx-auto my-5 max-w-lg shadow-lg"
+      >
+        {selectedProgram && (
+          <>
+            <h2 className="text-3xl font-bold text-center">{selectedProgram.title}</h2>
+            <p className="text-xl text-center">Price: ₹{selectedProgram.price.toLocaleString()}/month</p>
+            <p className="text-gray-800 text-center">{selectedProgram.intro}</p>
+            <p className="text-gray-800 text-center">{selectedProgram.ifYouLike}</p>
+            <div className="flex justify-end space-x-4 mt-4">
+              <Link href="/ContactUs"
+                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                  Enroll Now
+                
+              </Link>
+              <button onClick={closeModal} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md">
+                Close
+              </button>
+            </div>
+          </>
+        )}
+      </Modal>
     </div>
   );
 };

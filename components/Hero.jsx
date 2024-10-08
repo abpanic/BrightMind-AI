@@ -104,19 +104,19 @@ const JobCarousel = () => {
       <div className="flex justify-center gap-8 items-center pt-6">
         <div className="flex flex-col items-center">
           <p className="text-3xl font-bold text-[#F6B042]">1:1 Mentorship</p>
-          <p className="text-sm text-gray-300">With Technology Experts</p>
+          <p className="text-sm text-white font-semibold">With Technology Experts</p>
         </div>
         <div className="flex flex-col items-center">
           <p className="text-3xl font-bold text-[#F6B042]">5+</p>
-          <p className="text-sm text-gray-300">Technical Interviews</p>
+          <p className="text-sm text-white font-semibold">Technical Interviews</p>
         </div>
         <div className="flex flex-col items-center">
           <p className="text-3xl font-bold text-[#F6B042]">43+</p>
-          <p className="text-sm text-gray-300">Industry Projects</p>
+          <p className="text-sm text-white font-semibold">Industry Projects</p>
         </div>
         <div className="flex flex-col items-center">
           <p className="text-3xl font-bold text-[#F6B042]">100%</p>
-          <p className="text-sm text-gray-300">Placement Assistance</p>
+          <p className="text-sm text-white font-semibold">Placement Assistance</p>
         </div>
       </div>
     </div>
