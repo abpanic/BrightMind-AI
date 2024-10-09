@@ -29,7 +29,7 @@ const ContactUs = () => {
     e.preventDefault();
 
     // SendGrid API integration (Replace with your API endpoint)
-    const sendGridApiEndpoint = '/api/sendEmail'; // This will be your SendGrid API route
+    const sendGridApiEndpoint = '/api/sendgrid'; // This will be your SendGrid API route
     const response = await fetch(sendGridApiEndpoint, {
       method: 'POST',
       headers: {
@@ -56,7 +56,7 @@ const ContactUs = () => {
         workExperience: ''
       });
     } else {
-      alert('Something went wrong. Please try again.');
+      alert('Something went wrong. Please try again. or Email us at: bright-mind-ai.counsellor@bright-mind.in');
     }
   };
 
