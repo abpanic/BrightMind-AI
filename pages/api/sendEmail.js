@@ -21,13 +21,31 @@ export default async function handler(req, res) {
               },
               To: [
                 {
-                  Email: email,
-                  Name: 'Recipient Name',
+                  Email: 'bright-mind-ai.counsellor@bright-mind.in', // Your email where you want to receive the form data
+                  Name: 'Bright Mind AI Counsellor',
                 },
               ],
-              Subject: subject,
-              TextPart: message,
-              HTMLPart: `<h3>${message}</h3>`, // Optionally send HTML
+              Subject: `New Contact Us Submission from ${name}`,
+              TextPart: `
+                New contact form submission:
+                - Name: ${name}
+                - Email: ${email}
+                - Phone: ${phone}
+                - Career Path: ${careerPath}
+                - Work Experience: ${workExperience}
+                - Message: ${message}
+              `,
+              HTMLPart: `
+                <h3>New Contact Form Submission</h3>
+                <ul>
+                  <li><strong>Name:</strong> ${name}</li>
+                  <li><strong>Email:</strong> ${email}</li>
+                  <li><strong>Phone:</strong> ${phone}</li>
+                  <li><strong>Career Path:</strong> ${careerPath}</li>
+                  <li><strong>Work Experience:</strong> ${workExperience}</li>
+                  <li><strong>Message:</strong> ${message}</li>
+                </ul>
+              `,
             },
           ],
         });
