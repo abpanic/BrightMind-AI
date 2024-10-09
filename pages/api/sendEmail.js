@@ -21,7 +21,7 @@ export default async function handler(req, res) {
               },
               To: [
                 {
-                  Email: 'bright-mind-ai.counsellor@bright-mind.in', // Your email where you want to receive the form data
+                  Email: 'abhilash.panicker@outlook.com', // Your email where you want to receive the form data
                   Name: 'Bright Mind AI Counsellor',
                 },
               ],
