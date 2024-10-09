@@ -14,7 +14,7 @@ const Home = () => {
       </Head>
       <Hero />
       <Programs />
-      <Bright-MindEdge />    
+      <BrightMindEdge />    
       
     </div>
   )

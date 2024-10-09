@@ -29,7 +29,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const sendGridApiEndpoint = '/api/sendgrid'; 
+    const sendGridApiEndpoint = '/api/sendEmail'; 
     const response = await fetch(sendGridApiEndpoint, {
       method: 'POST',
       headers: {

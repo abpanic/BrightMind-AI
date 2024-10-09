@@ -342,59 +342,27 @@ export default function BrightMindEdge() {
               <span className="font-bold">unique ID</span> for verification.
             </p>
             <div className="mt-2">
-              <RoughNotation
-                type="box"
-                strokeWidth={2}
-                color="indigo"
-                show={true}
-                padding={10}
-              >
-                <Image
-                  src="/assets/cert-img.jpg"
-                  alt="Industry Certificate"
-                  width={700}
-                  height={500}
-                  style="cover"
-                  quality={75}
-                  className="rounded-lg shadow-lg"
-                />
-              </RoughNotation>
+            <RoughNotation
+  type="box"
+  strokeWidth={2}
+  color="indigo"
+  show={true}
+  padding={10}
+>
+  <div style={{ position: 'relative', width: '100%', height: '500px' }}>
+    <Image
+      src="/assets/cert-img.jpg"
+      alt="Industry Certificate"
+      fill
+      style={{ objectFit: 'cover' }} // Use style to apply object-fit
+      quality={75}
+      className="rounded-lg shadow-lg"
+    />
+  </div>
+</RoughNotation>
             </div>
           </motion.div>
-		  {/* Be the Leading Expert of AI */}
-          <div className="flex flex-col justify-between p-2 bg-white rounded-lg shadow-lg">
-            <div>
-              <FaChalkboardTeacher className="text-indigo-600 text-4xl mb-2" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Be the Leading Expert of AI
-              </h3>
-              <p className="mt-2 text-gray-600">
-                Master the most sought-after skills in AI and machine learning,
-                taught by industry professionals who are shaping the future of
-                technology. Our hands-on approach ensures you don’t just learn
-                the theory — you apply it to real-world scenarios, building
-                practical expertise that will set you apart in the competitive
-                job market.
-              </p>
-              <ul className="mt-4 space-y-2 text-gray-700 text-sm">
-                {[
-                  { icon: FaPython, label: "Python" },
-                  { icon: FaBrain, label: "Deep Learning"},
-                  { icon: FaRobot, label: "Machine Learning" },
-                  { icon: FaCamera, label: "Computer Vision" },
-                  { icon: FaNetworkWired, label: "Neural Networks" },
-                  { icon: FaBook, label: "Hugging Face"},
-                  { icon: FaTerminal, label: "Prompt Engineering" },
-                  { icon: FaComments, label: "NLP with Generative AI" },
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center">
-                    <item.icon className="text-indigo-600 mr-3" />                
-                  {item.label}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+		  
         </div>
       </div>
     </div>
