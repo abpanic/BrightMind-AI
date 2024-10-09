@@ -211,7 +211,7 @@ const ContactUs = () => {
         <div className="flex flex-col items-center justify-center bg-transparent">
           <FaEnvelope className="text-white text-6xl mb-4" />
           <p className="text-white text-center text-lg">Prefer to reach out directly?</p>
-          <p className="text-white text-center text-lg font-bold">training_queries@analyticsvidhya.com</p>
+          <p className="text-white text-center text-lg font-bold">bright-mind-ai.counsellor@bright-mind.in</p>
           <p className="text-white text-center text-sm mt-2">You'll hear back within 24 hours</p>
         </div>
       </div>
