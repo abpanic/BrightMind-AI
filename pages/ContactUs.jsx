@@ -77,7 +77,7 @@ const ContactUs = () => {
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold text-center mb-4">Thank you for contacting us!</h2>
-                <p className="text-center text-gray-700">We will get back to you shortly.</p>
+                <p className="text-center text-gray-700">We will get back to you in 24 hours.</p>
                 <button
                   onClick={() => setSubmitted(false)}
                   className="mt-4 bg-gradient-to-r from-indigo-800 via-purple-500 to-purple-800 text-white px-4 py-2 rounded-full focus:outline-none"
@@ -212,7 +212,7 @@ const ContactUs = () => {
         {/* Email contact section */}
         <div className="flex flex-col items-center justify-center bg-transparent">
           <FaEnvelope className="text-white text-6xl mb-4" />
-          <p className="text-white text-center text-lg">Prefer to reach out directly?</p>
+          <p className="text-white text-center text-lg">Prefer to reach out directly? or want to follow-up with us</p>
           <p className="text-white text-center text-lg font-bold">bright-mind-ai.counsellor@bright-mind.in</p>
           <p className="text-white text-center text-sm mt-2">You'll hear back within 24 hours</p>
         </div>
