@@ -37,12 +37,14 @@ const Programs = () => {
       <img className="w-full h-48 object-cover" src={program.image || "/assets/default-image.webp"} alt={program.title} />
       <div className="p-6">
         <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">{program.title}</h2>
-        <p className="text-gray-700 text-center mb-4 font-semibold">Plan your Career for:
-<ul className="text-gray-700 text-center list-none font-normal">
-  {program.careerTitles.map((title, index) => (
-    <li key={index}>• {title}</li>
-  ))}
-</ul></p>
+        <div className="text-gray-700 text-center mb-4 font-semibold">
+          <p>Plan your Career for:</p>
+          <ul className="text-gray-700 text-center list-none font-normal">
+            {program.careerTitles.map((title, index) => (
+              <li key={index}>• {title}</li>
+            ))}
+          </ul>
+        </div>
 
         <button
           className="block bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-md mx-auto hover:from-pink-500 hover:to-purple-500 transition-colors"
