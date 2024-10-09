@@ -7,7 +7,7 @@ const mailjet = new Mailjet({
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { email, subject, message } = req.body;
+    const { name, email, phone, careerPath, message, workExperience } = req.body;
 
     try {
       const request = mailjet
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
             {
               From: {
                 Email: 'abhilash.panicker111@gmail.com', // Your verified sender email
-                Name: 'Bright-Mind AI Counsellor',
+                Name: 'ABHILASH PANICKER',
               },
               To: [
                 {
@@ -50,14 +50,14 @@ export default async function handler(req, res) {
           ],
         });
 
-      const result = await request;
-      res.status(200).json({ success: true, result: result.body });
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ success: false, error: 'Failed to send email' });
+        const result = await request;
+        res.status(200).json({ success: true, result: result.body });
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, error: 'Failed to send email' });
+      }
+    } else {
+      res.setHeader('Allow', ['POST']);
+      res.status(405).end(`Method ${req.method} Not Allowed`);
     }
-  } else {
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-}
