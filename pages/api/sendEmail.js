@@ -55,10 +55,20 @@ export default async function handler(req, res) {
         });
 
         const result = await request;
-        res.status(200).json({ success: true, result: result.body });
+
+        // Write contact form data to Supabase
+        const { data, error } = await supabase
+          .from('contact_forms')
+          .insert([{ name, email, phone, career_path: careerPath, message, work_experience: workExperience }]);
+  
+        if (error) {
+          throw new Error('Error saving data to Supabase: ' + error.message);
+        }
+  
+        res.status(200).json({ success: true, result: result.body, supabaseData: data });
       } catch (error) {
         console.error(error);
-        res.status(500).json({ success: false, error: 'Failed to send email' });
+        res.status(500).json({ success: false, error: 'Failed to process request' });
       }
     } else {
       res.setHeader('Allow', ['POST']);
