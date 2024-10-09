@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { FaDatabase, FaNetworkWired, FaProjectDiagram, FaCloud, FaCode, FaServer, FaHdd, FaCog, FaProjectDiagram, FaTable, FaLayerGroup } from 'react-icons/fa';
+import { FaDatabase, FaNetworkWired, FaProjectDiagram, FaCloud, FaCode, FaServer, FaHdd, FaCog, FaTable, FaLayerGroup } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function DataEngineer() {
