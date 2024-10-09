@@ -7,7 +7,7 @@ export default function DataAnalystAssociate() {
   return (
     <>
       <Head>
-        <title>Data Analyst Associate | BrightMind AI</title>
+        <title>Data Analyst Associate | Bright-Mind AI</title>
         <meta name="description" content="Learn in-demand data analytics skills with our Data Analyst Associate course. Enroll today to gain practical, marketable data skills." />
       </Head>
 

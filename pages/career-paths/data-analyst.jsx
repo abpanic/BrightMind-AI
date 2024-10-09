@@ -7,7 +7,7 @@ export default function DataAnalyst() {
   return (
     <>
       <Head>
-        <title>Data Analyst | BrightMind AI</title>
+        <title>Data Analyst | Bright-Mind AI</title>
         <meta name="description" content="Learn in-demand data analytics skills with our Data Analyst course. Enroll today to gain practical, marketable data skills." />
       </Head>
 

@@ -10,7 +10,7 @@ export default function MachineLearningEngineer() {
   return (
     <>
       <Head>
-        <title>Machine Learning Engineer | BrightMind AI</title>
+        <title>Machine Learning Engineer | Bright-Mind AI</title>
         <meta name="description" content="Learn in-demand machine learning skills with our Machine Learning Engineer course. Enroll today to gain practical, marketable AI skills." />
       </Head>
 

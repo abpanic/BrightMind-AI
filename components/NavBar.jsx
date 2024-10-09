@@ -17,7 +17,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/brightmindedge" className="bg-[#533549]-800 text-white px-4 py-2 rounded-full hover:bg-gradient-to-r from-indigo-800 via-purple-500 to-purple-800 hover:bg-gray-600 font-semibold">
-                BrightMind Edge              
+                Bright-Mind Edge              
             </Link>
           </li>
           <li>

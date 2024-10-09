@@ -5,16 +5,16 @@ const FAQ = () => {
 
   const faqData = [
     {
-      "question": "What is BrightMind AI?",
-      "answer": "Out of Victoria, Australia. BrightMind AI is a company that educates young minds and bridges the divide between education and employability. We not only help learners acquire new skills but work on ensuring the skills are imparted from industry experts associated with the best companies in the field."
+      "question": "What is Bright-Mind AI?",
+      "answer": "Out of Victoria, Australia. Bright-Mind AI is a company that educates young minds and bridges the divide between education and employability. We not only help learners acquire new skills but work on ensuring the skills are imparted from industry experts associated with the best companies in the field."
     },
     {
       "question": "How do I sign up for your Programs?",
       "answer": "You can sign up for our services by visiting our Contact Us page and submitting your request."
     },
     {
-      "question": "Does BrightMind provide placement?",
-      "answer": "BrightMind provides placement services and career support. Our Programs have interview sessions for each module along with industry projects from partnering companies or from available information on business problems, so you can land a dream job in any company with confidence. We also offer internship opportunities for students clearing with Honors."
+      "question": "Does Bright-Mind provide placement?",
+      "answer": "Bright-Mind provides placement services and career support. Our Programs have interview sessions for each module along with industry projects from partnering companies or from available information on business problems, so you can land a dream job in any company with confidence. We also offer internship opportunities for students clearing with Honors."
     },
     {
       "question": "What payment methods do you accept?",

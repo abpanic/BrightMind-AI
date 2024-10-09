@@ -5,7 +5,7 @@ export default function DataScientist() {
   return (
     <>
       <Head>
-        <title>Data Scientist | BrightMind AI</title>
+        <title>Data Scientist | Bright-Mind AI</title>
         <meta name="description" content="Learn in-demand data analytics skills with our Data Analyst Associate course. Enroll today to gain practical, marketable data skills." />
       </Head>
 

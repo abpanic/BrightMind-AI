@@ -8,13 +8,13 @@ const Testimonials = () => {
       <Image 
         className='' 
         src="/assets/logo.svg" 
-        alt="BrightMind AI Logo" 
+        alt="Bright-Mind AI Logo" 
         width={150} 
         height={50} 
       />
       
       <p className='text-3xl font-semibold text-center'>
-        &quot;BrightMind AI transformed my career. The hands-on projects and personalized mentoring 
+        &quot;Bright-Mind AI transformed my career. The hands-on projects and personalized mentoring 
         prepared me for the AI industry. Highly recommend to anyone looking to upskill!&quot;
       </p>
       

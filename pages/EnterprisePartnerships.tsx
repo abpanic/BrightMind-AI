@@ -11,7 +11,7 @@ const EnterprisePartnerships: React.FC = () => {
 
       {/* Why Partner with Us Section */}
       <div className="bg-gray-50 p-8 rounded-lg shadow-md mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Why Partner with BrightMind AI?</h2>
+        <h2 className="text-2xl font-semibold mb-4">Why Partner with Bright-Mind AI?</h2>
         <ul className="list-disc list-inside text-lg text-grey-700">
           <li className="mb-3">Customized AI Training Programs tailored to your organization's specific needs.</li>
           <li className="mb-3">Access to Industry Experts and Mentors who provide hands-on guidance to your teams.</li>
