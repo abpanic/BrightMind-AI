@@ -1,20 +1,23 @@
-import mailjet from 'node-mailjet';
+import Mailjet from 'node-mailjet';
 
-const mailjetClient = mailjet.connect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
+const mailjet = new Mailjet({
+  apiKey: process.env.MJ_APIKEY_PUBLIC,
+  apiSecret: process.env.MJ_APIKEY_PRIVATE,
+});
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { email, subject, message } = req.body;
 
     try {
-      await mailjetClient
+      const request = mailjet
         .post('send', { version: 'v3.1' })
         .request({
           Messages: [
             {
               From: {
                 Email: 'abhilash.panicker111@gmail.com', // Your verified sender email
-                Name: 'Manmohan Singh',
+                Name: 'Bright-Mind AI Counsellor',
               },
               To: [
                 {
@@ -24,10 +27,13 @@ export default async function handler(req, res) {
               ],
               Subject: subject,
               TextPart: message,
+              HTMLPart: `<h3>${message}</h3>`, // Optionally send HTML
             },
           ],
         });
-      res.status(200).json({ success: true });
+
+      const result = await request;
+      res.status(200).json({ success: true, result: result.body });
     } catch (error) {
       console.error(error);
       res.status(500).json({ success: false, error: 'Failed to send email' });
