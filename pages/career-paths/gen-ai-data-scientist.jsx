@@ -10,8 +10,8 @@ export default function DataScientist() {
       </Head>
 
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mt-8">Data Analytics Career Path</h1>
-        <p className="mt-2 text-lg">
+        <h1 className="text-4xl mt-8 text-center bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold">Data Scietist with LLM Career Path</h1>
+        <p className="mt-4 bg-gradient-to-r from-white to-purple-100 rounded-lg text-lg text-center text-gray-700 max-w-4xl mx-auto">
           Learn in-demand skills like statistical analysis, Python, regression models, and
           machine learning in less than 6 months. Enroll today.
         </p>

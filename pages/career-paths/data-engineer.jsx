@@ -12,8 +12,8 @@ export default function DataEngineer() {
       </Head>
 
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-extrabold mt-8 text-center text-indigo-600">Data Engineer Career Path</h1>
-        <p className="mt-4 text-lg text-center text-gray-700 max-w-4xl mx-auto">
+        <h1 className="text-4xl mt-8 text-center bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold">Data Engineer Career Path</h1>
+        <p className="mt-4 bg-gradient-to-r from-white to-purple-100 rounded-lg text-lg text-center text-gray-700 max-w-4xl mx-auto">
           #BuildDataSystems by mastering Data Engineering. Learn how to design, develop, and maintain robust data infrastructure for modern businesses. Enroll today and future-proof your career.
         </p>
 

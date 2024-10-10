@@ -56,14 +56,14 @@
     ]
   },
   {
-    "title": "Data Structure & Algorithms with System Design",
+    "title": "Software Engineer I",
     "price": 2000,
     "image": "/assets/SoftwareEngineer.jpg",
-    "alt": "Software Engineer Basics",
+    "alt": "Software Engineer",
     "duration": "7 months",
     "intro": "Build a solid foundation in software engineering by mastering Data Structures and Algorithms (DSA) along with System Design principles.",
     "ifYouLike": "solving coding challenges, designing scalable systems, and optimizing algorithms",
-    "learnMoreLink": "/career-paths/software-engineer-basics",   
+    "learnMoreLink": "/career-paths/software-engineer",   
     "careerTitles": [
       "Software Engineer"      
     ]

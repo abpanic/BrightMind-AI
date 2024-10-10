@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { FaChartBar, FaPython, FaCogs, FaDatabase, FaLaptopCode, FaProjectDiagram, FaChartPie, FaTable } from 'react-icons/fa';
+import { FaDatabase, FaCode, FaServer, FaCog, FaLayerGroup, FaTree, FaNetworkWired, FaLightbulb, FaProjectDiagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-export default function DataAnalyst() {
+export default function SoftwareEngineerI() {
   const [activeTab, setActiveTab] = useState('learn');
   const [openModule, setOpenModule] = useState(null); // To manage which accordion section is open
 
@@ -26,20 +26,47 @@ export default function DataAnalyst() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <ul className="list-none text-lg text-gray-800 space-y-6">
                 <li className="flex items-start">
-                  <FaChartBar className="text-blue-500 mr-4" />
-                  <span>Master the most up-to-date practical skills and tools that data analysts use in their daily roles</span>
+                  <FaCode className="text-blue-500 mr-4" />
+                  <span>Develop proficiency in Data Structures & Algorithms (DSA) to solve complex coding problems</span>
                 </li>
                 <li className="flex items-start">
                   <FaProjectDiagram className="text-green-500 mr-4" />
-                  <span>Learn how to visualize data and present findings using charts in Excel and BI tools like IBM Cognos Analytics & Tableau</span>
+                  <span>Understand System Design principles to architect scalable and efficient systems</span>
                 </li>
                 <li className="flex items-start">
-                  <FaPython className="text-red-500 mr-4" />
-                  <span>Develop working knowledge of Python for analyzing data using Pandas and Numpy, and invoke APIs and Web Services</span>
+                  <FaCog className="text-purple-500 mr-4" />
+                  <span>Build a solid foundation in Object-Oriented Programming (OOP) concepts</span>
                 </li>
                 <li className="flex items-start">
-                  <FaCogs className="text-purple-500 mr-4" />
-                  <span>Gain technical experience through hands-on labs and projects, and build a portfolio to showcase your work</span>
+                  <FaServer className="text-red-500 mr-4" />
+                  <span>Learn about distributed systems and how to design for high availability and fault tolerance</span>
+                </li>
+                <li className="flex items-start">
+                  <FaNetworkWired className="text-teal-500 mr-4" />
+                  <span>Design and implement efficient data structures like trees, graphs, and hash tables</span>
+                </li>
+              </ul>
+
+              <ul className="list-none text-lg text-gray-800 space-y-6">
+                <li className="flex items-start">
+                  <FaTree className="text-yellow-500 mr-4" />
+                  <span>Master algorithms for sorting, searching, and optimization</span>
+                </li>
+                <li className="flex items-start">
+                  <FaDatabase className="text-blue-500 mr-4" />
+                  <span>Understand database design and interaction for both SQL and NoSQL databases</span>
+                </li>
+                <li className="flex items-start">
+                  <FaProjectDiagram className="text-green-500 mr-4" />
+                  <span>Learn best practices for designing robust, scalable back-end systems</span>
+                </li>
+                <li className="flex items-start">
+                  <FaLightbulb className="text-red-500 mr-4" />
+                  <span>Implement caching, load balancing, and other performance optimization techniques</span>
+                </li>
+                <li className="flex items-start">
+                  <FaLayerGroup className="text-purple-500 mr-4" />
+                  <span>Master techniques for designing microservices architectures</span>
                 </li>
               </ul>
             </div>
@@ -57,46 +84,46 @@ export default function DataAnalyst() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <ul className="list-none text-lg text-gray-800 space-y-6">
                 <li className="flex items-start">
-                  <FaDatabase className="text-blue-500 mr-4" />
-                  <span>Data Science</span>
+                  <FaCode className="text-blue-500 mr-4" />
+                  <span>Data Structures</span>
                 </li>
                 <li className="flex items-start">
-                  <FaChartBar className="text-green-500 mr-4" />
-                  <span>Data Analysis</span>
+                  <FaCog className="text-green-500 mr-4" />
+                  <span>Algorithms</span>
                 </li>
                 <li className="flex items-start">
-                  <FaPython className="text-purple-500 mr-4" />
-                  <span>Python Programming</span>
-                </li>
-              </ul>
-
-              <ul className="list-none text-lg text-gray-800 space-y-6">
-                <li className="flex items-start">
-                  <FaLaptopCode className="text-red-500 mr-4" />
-                  <span>Jupyter Notebook</span>
-                </li>
-                <li className="flex items-start">
-                  <FaProjectDiagram className="text-teal-500 mr-4" />
-                  <span>Machine Learning</span>
-                </li>
-                <li className="flex items-start">
-                  <FaChartPie className="text-yellow-500 mr-4" />
-                  <span>Statistical Analysis</span>
+                  <FaServer className="text-purple-500 mr-4" />
+                  <span>System Design</span>
                 </li>
               </ul>
 
               <ul className="list-none text-lg text-gray-800 space-y-6">
                 <li className="flex items-start">
-                  <FaTable className="text-blue-500 mr-4" />
-                  <span>Tableau Software</span>
+                  <FaTree className="text-red-500 mr-4" />
+                  <span>Object-Oriented Programming</span>
                 </li>
                 <li className="flex items-start">
-                  <FaProjectDiagram className="text-green-500 mr-4" />
-                  <span>Predictive Modelling</span>
+                  <FaDatabase className="text-teal-500 mr-4" />
+                  <span>Database Management (SQL & NoSQL)</span>
                 </li>
                 <li className="flex items-start">
-                  <FaCogs className="text-purple-500 mr-4" />
-                  <span>Exploratory Data Analysis (EDA)</span>
+                  <FaLayerGroup className="text-yellow-500 mr-4" />
+                  <span>Microservices</span>
+                </li>
+              </ul>
+
+              <ul className="list-none text-lg text-gray-800 space-y-6">
+                <li className="flex items-start">
+                  <FaProjectDiagram className="text-blue-500 mr-4" />
+                  <span>Scalability</span>
+                </li>
+                <li className="flex items-start">
+                  <FaLightbulb className="text-green-500 mr-4" />
+                  <span>Performance Optimization</span>
+                </li>
+                <li className="flex items-start">
+                  <FaNetworkWired className="text-purple-500 mr-4" />
+                  <span>Distributed Systems</span>
                 </li>
               </ul>
             </div>
@@ -111,7 +138,7 @@ export default function DataAnalyst() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Completion Timeline</h2>
-            <p className="text-lg text-gray-800">The expected completion timeline for this program is 6 months.</p>
+            <p className="text-lg text-gray-800">The expected completion timeline for this program is 9 months.</p>
           </motion.div>
         );
       case 'path':
@@ -125,13 +152,16 @@ export default function DataAnalyst() {
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Path Structure</h2>
             {/* Accordion for modules */}
             <div className="space-y-4">
-              {renderAccordionItem("Programming with Python", "Learn the fundamentals of Python programming, focusing on data manipulation and analysis using libraries like Pandas and Numpy.")}
-              {renderAccordionItem("Translate Data into Insights", "Develop the ability to analyze raw data and extract actionable insights, using data visualization tools like Excel, PowerBI, and Tableau.")}
-              {renderAccordionItem("Statistics", "Understand key statistical concepts such as probability, distributions, hypothesis testing, and descriptive statistics for data analysis.")}
-              {renderAccordionItem("Regression Analysis", "Master regression techniques, including linear and logistic regression, to model relationships between variables and predict outcomes.")}
-              {renderAccordionItem("PowerBI", "Gain proficiency in using PowerBI to create interactive visualizations, reports, and dashboards for data analysis and business insights.")}
-              {renderAccordionItem("Tableau", "Learn to use Tableau for data visualization, building powerful and interactive dashboards to present data findings effectively.")}
-              {renderAccordionItem("Basics of Machine Learning", "Get introduced to machine learning concepts, including supervised and unsupervised learning, and explore algorithms such as decision trees and clustering.")}
+              {renderAccordionItem("Data Structures", "Learn about arrays, linked lists, stacks, queues, trees, and graphs and their role in problem-solving.")}
+              {renderAccordionItem("Algorithms", "Study sorting, searching, recursion, dynamic programming, and greedy algorithms to optimize solutions.")}
+              {renderAccordionItem("System Design", "Learn how to design scalable, distributed systems, focusing on fault tolerance and high availability.")}
+              {renderAccordionItem("Object-Oriented Programming", "Understand the principles of OOP, including inheritance, polymorphism, abstraction, and encapsulation.")}
+              {renderAccordionItem("Database Management", "Work with SQL and NoSQL databases to store, query, and manage structured and unstructured data.")}
+              {renderAccordionItem("Microservices Architecture", "Develop microservices-based architectures to build scalable, maintainable, and testable software systems.")}
+              {renderAccordionItem("Distributed Systems", "Explore distributed system concepts, including data replication, consensus algorithms, and eventual consistency.")}
+              {renderAccordionItem("Caching & Load Balancing", "Implement caching strategies and load balancing to optimize performance and ensure system reliability.")}
+              {renderAccordionItem("Performance Optimization", "Learn performance tuning techniques for backend systems, including profiling, memory management, and CPU optimization.")}
+              {renderAccordionItem("Security Best Practices", "Understand security principles for software development, including encryption, secure coding, and authentication protocols.")}
             </div>
           </motion.div>
         );
@@ -144,7 +174,7 @@ export default function DataAnalyst() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Price</h2>
-            <p className="text-lg text-gray-800">The total cost for the Data Analyst program is $899, with a 10% discount for early enrollment.</p>
+            <p className="text-lg text-gray-800">The total cost for the Software Engineer I program is $1099, with a 10% discount for early enrollment.</p>
           </motion.div>
         );
       default:
@@ -172,16 +202,16 @@ export default function DataAnalyst() {
   return (
     <>
       <Head>
-        <title>Data Analyst | Bright-Mind AI</title>
-        <meta name="description" content="Learn in-demand data analytics skills with our Data Analyst course. Enroll today to gain practical, marketable data skills." />
+        <title>Software Engineer I | Bright-Mind AI</title>
+        <meta name="description" content="Master the fundamentals of software engineering, including data structures, algorithms, and system design. Enroll today to build a solid foundation for your software engineering career." />
       </Head>
 
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl mt-8 text-center bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold">Data Analyst Career Path</h1>
+        <h1 className="text-4xl mt-8 text-center bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold">Software Engineer I Career Path</h1>
 
         {/* Intro Section */}
         <p className="mt-4 bg-transparent rounded-lg text-lg text-center text-white max-w-4xl mx-auto">
-          Master key skills like statistical analysis, Python, regression models, and machine learning in less than 6 months. Enroll today to build a solid foundation in data analysis and visualization.
+          Build your career as a software engineer by mastering Data Structures, Algorithms, and System Design. Gain the foundational skills to design scalable and efficient systems. Enroll today.
         </p>
 
         {/* Tabs Section */}

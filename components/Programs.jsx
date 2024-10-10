@@ -73,7 +73,7 @@ const Programs = () => {
             <h2 className="text-2xl font-bold text-center">{selectedProgram.title}</h2>
             <p className="text-xl text-center">
   Price: ₹{(selectedProgram.price * 10).toLocaleString()} or ₹{selectedProgram.price.toLocaleString()}/month</p>
-            <span className="flash text-center">🪔Diwali Offer!</span>
+            <span className="flash text-center">🪔Price till Diwali!!</span>
             <p className="text-gray-800 text-center">{selectedProgram.intro}</p>
             <p className="text-gray-800 text-center">{selectedProgram.ifYouLike}</p>
             <div className="flex justify-end space-x-4 mt-4">
