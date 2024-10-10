@@ -216,7 +216,7 @@ const ContactUs = () => {
   <h2 className="text-white text-2xl font-semibold mb-6">Prefer WhatsApp?</h2>
   <Link 
     aria-label="Chat on WhatsApp" 
-    href="https://wa.me/917025607274?text=I'm%20interested%20in%20machine%20learning%20career%20path"
+    href="https://wa.me/917025607274?text=I'm%20interested%20in%20Gen%20AI%20career%20path"
     className="mb-8"
   >
     <Image 
