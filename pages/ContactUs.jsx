@@ -4,8 +4,8 @@ import 'react-phone-input-2/lib/style.css';
 import { FaEnvelope } from 'react-icons/fa';
 import workExperienceOptions from '../data/workExperienceOptions.json';
 import pricingPlans from '../data/pricingPlans.json';
-
-
+import Link from 'next/link';
+import Image from 'next/image';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -185,7 +185,7 @@ const ContactUs = () => {
 
             <div className="mb-4">
               <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
-                Message
+                Message/Query
               </label>
               <textarea
                 id="message"
@@ -193,7 +193,7 @@ const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                placeholder="Your Message"
+                placeholder="Your Message or Query for us!"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 h-32 resize-none"
               ></textarea>
             </div>
@@ -209,13 +209,35 @@ const ContactUs = () => {
           </form>
         </div>
 
-        {/* Email contact section */}
-        <div className="flex flex-col items-center justify-center bg-transparent">
-          <FaEnvelope className="text-white text-6xl mb-4" />
-          <p className="text-white text-center text-lg">Prefer to reach out directly? or want to follow-up with us</p>
-          <p className="text-white text-center text-lg font-bold">bright-mind-ai.counsellor@bright-mind.in</p>
-          <p className="text-white text-center text-sm mt-2">You'll hear back within 24 hours</p>
-        </div>
+        {/* Contact via Email and WhatsApp */}
+<div className="flex flex-col items-center justify-center bg-transparent">
+  
+  {/* WhatsApp Link */}
+  <h2 className="text-white text-2xl font-semibold mb-6">Prefer WhatsApp?</h2>
+  <Link 
+    aria-label="Chat on WhatsApp" 
+    href="https://wa.me/917025607274?text=I'm%20interested%20in%20machine%20learning%20career%20path"
+    className="mb-8"
+  >
+    <Image 
+      alt="Chat on WhatsApp" 
+      src="/assets/WhatsAppButtonGreenSmall.png" 
+      width={200} 
+      height={150}
+      className="hover:scale-105 transition-transform duration-300 ease-in-out"
+    />
+  </Link>
+
+  {/* Divider for better visual separation */}
+  <div className="w-full border-t border-gray-300 my-6"></div>
+
+  {/* Email contact section */}
+  <FaEnvelope className="text-white text-4xl mb-4" />
+  <p className="text-white text-center text-lg mb-2">Prefer to reach out directly?</p>
+  <p className="text-white text-center text-lg font-bold mb-4">bright-mind-ai.counsellor@bright-mind.in</p>
+  <p className="text-white text-center text-sm">You'll hear back within 24 hours</p>
+</div>
+
       </div>
     </div>
   );
