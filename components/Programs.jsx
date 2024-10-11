@@ -61,18 +61,18 @@ const Programs = () => {
       <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text mb-6">
         Career Paths
       </h1>
-      <Carousel items={cards} />
+      <Carousel items={cards} itemsToShow={6} enableAutoScroll={true} loop={true}/>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        contentLabel="Program Details"
+        contentLabel="Career Path Details"
         className="bg-white rounded-lg p-6 mx-auto my-5 max-w-lg shadow-lg"
       >
         {selectedProgram && (
           <>
             <h2 className="text-2xl font-bold text-center">{selectedProgram.title}</h2>
             <p className="text-xl text-center">
-  Price: ₹{(selectedProgram.price).toLocaleString()} or ₹{selectedProgram.EMI.toLocaleString()}/month</p>
+  Price: ₹{selectedProgram.EMI.toLocaleString()}/month for {selectedProgram.duration.toLocaleString()}</p>  
             <span className="flash text-center">🪔Price till Diwali!!</span>
             <p className="text-gray-800 text-center">{selectedProgram.intro}</p>
             <p className="text-gray-800 text-center">{selectedProgram.ifYouLike}</p>
