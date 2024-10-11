@@ -7,6 +7,7 @@ import pricingPlans from '../data/pricingPlans.json';
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,6 +19,8 @@ const ContactUs = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isTermsAgreed, setIsTermsAgreed] = useState(false);
+  const [isWhatsappAllowed, setIsWhatsappAllowed] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -193,9 +196,39 @@ const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                placeholder="Your Message or Query for us!"
+                placeholder="Your Query or Message! (like if you in different timezone in Australia or separate Whatsapp number)"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 h-32 resize-none"
               ></textarea>
+            </div>
+              
+            {/* Checkbox for Terms & Conditions */}
+            <div className="flex items-center mb-1 text-xs">
+              <input
+                type="checkbox"
+                id="agreeTerms"
+                className="mr-1"
+                checked={isTermsAgreed}
+                onChange={(e) => setIsTermsAgreed(e.target.checked)}
+                required
+              />
+              <label htmlFor="agreeTerms">
+                Agree to the <a href="/terms" className="underline text-blue-500">Terms & Conditions</a>
+              </label>
+            </div>
+
+            {/* Checkbox for WhatsApp Contact */}
+            <div className="flex items-center mb-1 text-xs">
+              <input
+                type="checkbox"
+                id="whatsappConsent"
+                className="mr-1"
+                checked={isWhatsappAllowed}
+                onChange={(e) => setIsWhatsappAllowed(e.target.checked)}
+                required
+              />
+              <label htmlFor="whatsappConsent">
+                Call and reach out via WhatsApp
+              </label>
             </div>
 
             <div className="flex justify-center">
