@@ -1,7 +1,7 @@
 [
   {
     "title": "Associate Data Analyst",
-    "price": 1500,
+    "price": 4500,
     "image": "/assets/DataAnalyst.png",
     "alt": "Data Analyst",
     "duration": "3 months",
@@ -11,75 +11,81 @@
     "careerTitles": [
       "Junior Business Analyst",
       "Junior Data Analyst"
-    ]
+    ],
+    "EMI": 1500
   },
   {
     "title": "Data Analyst with Python & SQL",
-    "price": 15000,
+    "price": 25000,
     "image": "/assets/DataAnalyst.jpg",
     "alt": "Data Analyst",
     "duration": "6 months",
     "intro": "Gain advanced knowledge to work with real-world datasets, analyze trends, and improve business insights using a variety of analytical techniques.",
     "ifYouLike": "analyzing data, building visualizations, and solving business problems through data insights",
-    "learnMoreLink": "/career-paths/data-analyst",    
+    "learnMoreLink": "/career-paths/data-analyst",
     "careerTitles": [
       "Data Analyst",
       "Business Analyst"
-    ]
+    ],
+    "EMI": 4583
   },
   {
     "title": "Machine Learning Engineer",
-    "price": 25000,
+    "price": 250000,
     "image": "/assets/MLEngineer.png",
     "alt": "Machine Learning Engineer",
     "duration": "12 months",
     "intro": "Master the core concepts and advanced techniques of machine learning, enabling you to build scalable models and contribute to AI projects.",
     "ifYouLike": "working on machine learning algorithms, developing AI systems, and solving complex data challenges",
-    "learnMoreLink": "/career-paths/machine-learning-engineer",   
+    "learnMoreLink": "/career-paths/machine-learning-engineer",
     "careerTitles": [
-      "Machine Learning Engineer",      
+      "Machine Learning Engineer",
       "Data Scientist"
-    ]
+    ],
+    "EMI": 25000
   },
   {
     "title": "Data Scientist with LLM",
-    "price": 37500,
+    "price": 370000,
     "image": "/assets/GenAIScientist.jpg",
     "alt": "Gen-AI Scientist",
-    "duration": "12 months",
+    "duration": "18 months",
     "intro": "Become a leader in artificial intelligence by mastering machine learning, deep learning, and large language models (LLMs) to build cutting-edge AI solutions.",
     "ifYouLike": "working with AI systems, creating machine learning models, and developing full-stack AI solutions",
-    "learnMoreLink": "/career-paths/gen-ai-data-scientist",    
+    "learnMoreLink": "/career-paths/gen-ai-data-scientist",
     "careerTitles": [
-      "Data Scientist - GenAI",      
+      "Data Scientist - GenAI",
       "Lead Data Scientist"
-    ]
+    ],
+    "EMI": 25000
   },
   {
     "title": "Software Engineer I",
-    "price": 2000,
+    "price": 50000,
     "image": "/assets/SoftwareEngineer.jpg",
     "alt": "Software Engineer",
-    "duration": "7 months",
+    "duration": "9 months",
     "intro": "Build a solid foundation in software engineering by mastering Data Structures and Algorithms (DSA) along with System Design principles.",
     "ifYouLike": "solving coding challenges, designing scalable systems, and optimizing algorithms",
-    "learnMoreLink": "/career-paths/software-engineer",   
+    "learnMoreLink": "/career-paths/software-engineer",
     "careerTitles": [
-      "Software Engineer"      
-    ]
+      "Software Engineer"
+    ],
+    "EMI": 6300
   },
   {
     "title": "Data Engineer",
-    "price": 18000,
+    "price": 75000,
     "image": "/assets/DataEngineer.jpg",
     "alt": "Data Engineer",
-    "duration": "8 months",
+    "duration": "12 months",
     "intro": "Learn how to design and implement the architecture that allows data generation, transformation, and analysis at scale in modern businesses.",
     "ifYouLike": "building data pipelines, working with large datasets, and optimizing data systems",
-    "learnMoreLink": "/career-paths/data-engineer",   
+    "learnMoreLink": "/career-paths/data-engineer",
     "careerTitles": [
       "Data Engineer",
       "Big Data Engineer"
-    ]
+    ],
+    "EMI": 6900
   }
 ]

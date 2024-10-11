@@ -2,17 +2,9 @@ import React from "react";
 import { RoughNotation } from "react-rough-notation";
 import { motion } from "framer-motion";
 import {
-  FaPython,
-  FaBrain,
-  FaRobot,
-  FaCamera,
-  FaNetworkWired,
-  FaBook,
-  FaTerminal,
   FaChalkboardTeacher,
   FaCreditCard,
   FaUserTie,
-  FaComments,
   FaCertificate,
   FaGlobe,
   FaFileAlt ,
@@ -343,23 +335,23 @@ export default function BrightMindEdge() {
             </p>
             <div className="mt-2">
             <RoughNotation
-  type="box"
-  strokeWidth={2}
-  color="indigo"
-  show={true}
-  padding={10}
->
-  <div style={{ position: 'relative', width: '100%', height: '500px' }}>
-    <Image
-      src="/assets/cert-img.jpg"
-      alt="Industry Certificate"
-      fill
-      style={{ objectFit: 'cover' }} // Use style to apply object-fit
-      quality={75}
-      className="rounded-lg shadow-lg"
-    />
-  </div>
-</RoughNotation>
+            type="box"
+            strokeWidth={2}
+            color="indigo"
+            show={true}
+            padding={10}
+          >
+            <div style={{ position: 'relative', width: '100%', height: '500px' }}>
+              <Image
+                src="/assets/cert-img.jpg"
+                alt="Industry Certificate"
+                fill
+                style={{ objectFit: 'cover' }} // Use style to apply object-fit
+                quality={75}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </RoughNotation>
             </div>
           </motion.div>
 		  

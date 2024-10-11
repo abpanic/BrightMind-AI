@@ -61,7 +61,7 @@ const ContactUs = () => {
         workExperience: ''
       });
     } else {
-      alert('Something went wrong. Please email us directly at: bright-mind-ai.counsellor@bright-mind.in');
+      alert('Something went wrong. You can send us an email directly or reach out through WhatsApp');
     }
   };
 
@@ -196,7 +196,7 @@ const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                placeholder="Your Query or Message! (like if you in different timezone in Australia or separate Whatsapp number)"
+                placeholder="Your Query or Message! (like if you are in different timezone in Australia/US or have prefered call back time)"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 h-32 resize-none"
               ></textarea>
             </div>
