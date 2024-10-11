@@ -131,6 +131,37 @@ export default function DataScientistLLM() {
       <Head>
         <title>Data Scientist with LLM | Bright-Mind AI</title>
         <meta name="description" content="Learn in-demand data analytics skills with our Data Scientist with LLM career path. Enroll today to gain practical, marketable data skills." />
+        <meta name="keywords" content="Data Science, Machine Learning, LLM, Generative AI, GANs, LangChain, Hugging Face" />
+        <meta property="og:title" content="Data Scientist with LLM | Bright-Mind AI" />
+        <meta property="og:description" content="Master Data Science and Large Language Models (LLMs) to build AI-driven solutions." />
+        <meta property="og:image" content="https://www.bright-mind.in/assets/images/data-scientist-llm-thumbnail.png" />
+        <meta property="og:url" content="https://www.bright-mind.in/data-scientist-llm" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Schema Markup for Data Scientist LLM */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "http://schema.org",
+            "@type": "Course",
+            "name": "Data Scientist with LLM",
+            "description": "Learn in-demand skills like data analytics, machine learning, and large language models (LLMs) in our Data Scientist with LLM course.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Bright-Mind AI",
+              "url": "https://www.bright-mind.in"
+            },
+            "courseMode": "Online",
+            "educationalCredentialAwarded": "Data Scientist Certification",
+            "timeToComplete": "P12M",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.bright-mind.in/data-scientist-llm",
+              "priceCurrency": "USD",
+              "price": "1299",
+              "validThrough": "2024-12-31"
+            }
+          }`}
+        </script>
       </Head>
 
       <div className="container mx-auto px-4 py-16">

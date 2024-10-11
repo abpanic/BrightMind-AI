@@ -172,8 +172,28 @@ export default function DataAnalyst() {
   return (
     <>
       <Head>
-        <title>Data Analyst | Bright-Mind AI</title>
-        <meta name="description" content="Learn in-demand data analytics skills with our Data Analyst course. Enroll today to gain practical, marketable data skills." />
+      <title>Data Analyst | Bright-Mind AI</title>
+      <meta name="description" content="Master data analysis with Bright-Mind AI's Data Analyst program. Learn key skills like Python, statistical analysis, regression models, and machine learning." />
+      <meta name="keywords" content="Data Analyst, Python, Machine Learning, Statistical Analysis, Data Visualization, Regression Models, Data Science" />
+      <meta property="og:title" content="Data Analyst | Bright-Mind AI" />
+      <meta property="og:description" content="Become a Data Analyst with Bright-Mind AI. Gain hands-on experience in data analysis, visualization, and machine learning." />
+      <meta property="og:image" content="https://www.bright-mind.in/assets/images/thumbnail.png" />
+      <meta property="og:url" content="https://www.bright-mind.in/career-paths/data-analyst.png" />
+    
+      {/* Schema Markup for Structured Data */}
+      <script type="application/ld+json">
+        {`{
+          "@context": "http://schema.org",
+          "@type": "Course",
+          "name": "Data Analyst Career Path",
+          "description": "Master key skills like Python, statistical analysis, regression models, and machine learning in less than 6 months.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Bright-Mind AI",
+            "url": "https://www.bright-mind.in"
+          }
+        }`}
+      </script>
       </Head>
 
       <div className="container mx-auto px-4 py-16">

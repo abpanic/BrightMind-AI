@@ -204,6 +204,19 @@ export default function SoftwareEngineerI() {
       <Head>
         <title>Software Engineer I | Bright-Mind AI</title>
         <meta name="description" content="Master the fundamentals of software engineering, including data structures, algorithms, and system design. Enroll today to build a solid foundation for your software engineering career." />
+        <meta name="keywords" content="software engineering, system design, algorithms, data structures, backend development, software engineer career path" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Software Engineer I | Bright-Mind AI" />
+        <meta property="og:description" content="Kickstart your software engineering career by mastering data structures, algorithms, and system design." />
+        <meta property="og:image" content="https://www.bright-mind.in/assets/images/software-engineer.png" />
+        <meta property="og:url" content="https://www.bright-mind.in/software-engineer-i" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Software Engineer I | Bright-Mind AI" />
+        <meta name="twitter:description" content="Build your career as a software engineer by mastering Data Structures, Algorithms, and System Design. Enroll today." />
+        <meta name="twitter:image" content="https://www.bright-mind.in/assets/images/software-engineer-thumbnail.png" />
       </Head>
 
       <div className="container mx-auto px-4 py-16">

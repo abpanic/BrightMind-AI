@@ -207,6 +207,37 @@ export default function MachineLearningEngineer() {
       <Head>
         <title>Machine Learning Engineer | Bright-Mind AI</title>
         <meta name="description" content="Learn in-demand machine learning skills with our Machine Learning Engineer course. Enroll today to gain practical, marketable AI skills." />
+        <meta name="keywords" content="machine learning, AI, engineer, career path, linear regression, decision trees, neural networks" />
+        <meta property="og:title" content="Machine Learning Engineer | Bright-Mind AI" />
+        <meta property="og:description" content="Master the skills needed to become a Machine Learning Engineer. Enroll today to kickstart your AI career." />
+        <meta property="og:image" content="https://www.bright-mind.in/assets/images/ml-engineer-thumbnail.png" />
+        <meta property="og:url" content="https://www.bright-mind.in/machine-learning-engineer" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "http://schema.org",
+            "@type": "Course",
+            "name": "Machine Learning Engineer",
+            "description": "Learn the in-demand skills required to become a Machine Learning Engineer. The course covers AI concepts, supervised and unsupervised learning, and advanced ML techniques.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Bright-Mind AI",
+              "url": "https://www.bright-mind.in"
+            },
+            "courseMode": "Online",
+            "educationalCredentialAwarded": "ML Engineer Certification",
+            "timeToComplete": "P12M",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.bright-mind.in/machine-learning-engineer",
+              "priceCurrency": "USD",
+              "price": "999",
+              "validThrough": "2024-12-31"
+            }
+          }`}
+        </script>
       </Head>
 
       <div className="container mx-auto px-4 py-16">

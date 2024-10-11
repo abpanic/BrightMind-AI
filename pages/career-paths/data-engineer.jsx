@@ -9,6 +9,37 @@ export default function DataEngineer() {
       <Head>
         <title>Data Engineer | Bright-Mind AI</title>
         <meta name="description" content="Become a Data Engineer and master the skills needed to design, build, and manage scalable data systems. Enroll today to build a future-proof career." />
+        <meta name="keywords" content="Data Engineer, Data Pipelines, Cloud Platforms, Distributed Systems, SQL, NoSQL, ETL Processes" />
+        <meta property="og:title" content="Data Engineer | Bright-Mind AI" />
+        <meta property="og:description" content="Become a Data Engineer with Bright-Mind AI. Master skills like SQL, cloud platforms, ETL processes, and distributed systems." />
+        <meta property="og:image" content="https://www.bright-mind.in/assets/images/data-engineer-thumbnail.png" />
+        <meta property="og:url" content="https://www.bright-mind.in/data-engineer" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Schema Markup for Data Engineer Course */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "http://schema.org",
+            "@type": "Course",
+            "name": "Data Engineer Program",
+            "description": "Become a Data Engineer by mastering skills like designing scalable data systems, managing cloud infrastructure, and optimizing data pipelines.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Bright-Mind AI",
+              "url": "https://www.bright-mind.in"
+            },
+            "courseMode": "Online",
+            "educationalCredentialAwarded": "Data Engineer Certification",
+            "timeToComplete": "P6M",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.bright-mind.in/data-engineer",
+              "priceCurrency": "USD",
+              "price": "999",
+              "validThrough": "2024-12-31"
+            }
+          }`}
+          </script>
       </Head>
 
       <div className="container mx-auto px-4 py-16">
