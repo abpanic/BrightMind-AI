@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { FaChartBar, FaDatabase, FaClipboardList, FaTable, FaChartLine, FaTasks, FaFolderOpen, FaCheckCircle, FaLayerGroup, FaClipboard } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+
+
 export default function DataAnalystAssociate() {
   const [activeTab, setActiveTab] = useState('learn');
   const [openModule, setOpenModule] = useState(null); // To manage which accordion section is open
@@ -170,8 +172,28 @@ export default function DataAnalystAssociate() {
   return (
     <>
       <Head>
-        <title>Data Analyst Associate | Bright-Mind AI</title>
+        <title>Data Analyst Associate | Bright-Mind AI</title>        
         <meta name="description" content="Learn in-demand data analytics skills with our Data Analyst Associate course. Enroll today to gain practical, marketable data skills." />
+        <meta name="keywords" content="Data analysis, data visualization, SQL, Python, PowerBI, Tableau, data analyst course, business insights" />
+        <meta property="og:title" content="Data Analyst Associate | Bright-Mind AI" />
+        <meta property="og:description" content="Gain hands-on experience in data analysis, SQL, Python, and data visualization tools like PowerBI and Tableau. Learn to derive actionable insights and present data effectively." />
+        <meta property="og:url" content="https://www.bright-mind.in/career-paths/data-analyst-associate" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.bright-mind.in/assets/DataAnalyst.png"/>
+        {/* Schema Markup for Structured Data */}
+      <script type="application/ld+json">
+        {`{
+          "@context": "http://schema.org",
+          "@type": "Course",
+          "name": "Data Analyst Associate Career Path",
+          "description": "Learn in-demand data analytics skills with our Data Analyst Associate course. Enroll today to gain practical, marketable data skills.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Bright-Mind AI",
+            "url": "https://www.bright-mind.in"
+          }
+        }`}
+      </script>
       </Head>
 
       <div className="container mx-auto px-4 py-16">
