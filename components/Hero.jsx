@@ -39,7 +39,7 @@ const JobCarousel = () => {
       {/* Hero Heading */}
       <div className="text-center mb-8">
         
-      <h1 className="text-4xl font-bold text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-bold text-white bg-gradient-to-r from-violet-600 via-green-600 to-red-600 bg-clip-text text-transparent">
           Unlock{" "}
           <RoughNotation type="highlight" show={true} color="#4a148c">
             High-Paying
