@@ -16,7 +16,7 @@
   },
   {
     "title": "Data Analyst with Python & SQL",
-    "price": 25000,
+    "price": 22500,
     "image": "/assets/DataAnalyst.jpg",
     "alt": "Data Analyst",
     "duration": "6 months",
@@ -27,11 +27,11 @@
       "Data Analyst",
       "Business Analyst"
     ],
-    "EMI": 4583
+    "EMI": 4500
   },
   {
     "title": "Machine Learning Engineer",
-    "price": 250000,
+    "price": 150000,
     "image": "/assets/MLEngineer.png",
     "alt": "Machine Learning Engineer",
     "duration": "12 months",
@@ -42,11 +42,11 @@
       "Machine Learning Engineer",
       "Data Scientist"
     ],
-    "EMI": 25000
+    "EMI": 15000
   },
   {
     "title": "Data Scientist with LLM",
-    "price": 370000,
+    "price": 200000,
     "image": "/assets/GenAIScientist.jpg",
     "alt": "Gen-AI Scientist",
     "duration": "18 months",
@@ -57,11 +57,11 @@
       "Data Scientist - GenAI",
       "Lead Data Scientist"
     ],
-    "EMI": 25000
+    "EMI": 20000
   },
   {
     "title": "Software Engineer I",
-    "price": 50000,
+    "price": 50400,
     "image": "/assets/SoftwareEngineer.jpg",
     "alt": "Software Engineer",
     "duration": "9 months",
@@ -75,7 +75,7 @@
   },
   {
     "title": "Data Engineer",
-    "price": 75000,
+    "price": 69000,
     "image": "/assets/DataEngineer.jpg",
     "alt": "Data Engineer",
     "duration": "12 months",
