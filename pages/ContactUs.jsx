@@ -6,6 +6,7 @@ import workExperienceOptions from '../data/workExperienceOptions.json';
 import pricingPlans from '../data/pricingPlans.json';
 import Link from 'next/link';
 import Image from 'next/image';
+import {supabase} from './api/sendEmail'
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ const ContactUs = () => {
   const [errorModalVisible, setErrorModalVisible] = useState(false);
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
   const [isWhatsappAllowed, setIsWhatsappAllowed] = useState(false);
+  const [errors, setErrors] = useState({ emailFailed: false, supabaseFailed: false });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +55,16 @@ const ContactUs = () => {
       }),
     });
 
+    const result = await response.json();
+
     if (response.ok) {
+      if (!result.emailSuccess || !result.supabaseSuccess) {
+        setErrors({
+          emailFailed: !result.emailSuccess,
+          supabaseFailed: !result.supabaseSuccess,
+        });
+        setErrorModalVisible(true); // Show modal if either fails
+      } else {
       setSubmitted(true);
       setFormData({
         name: '',
@@ -64,10 +75,11 @@ const ContactUs = () => {
         workExperience: '',
         couponCode: ''
       });
-    } else {
-      setErrorModalVisible(true); // Show error modal for any non-429 error
     }
-  };
+  } else {
+    setErrorModalVisible(true);
+  }
+};
 
   return (
     <div className="min-h-screen bg-transparent p-6 flex items-center justify-center">
