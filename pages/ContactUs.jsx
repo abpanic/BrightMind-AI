@@ -15,7 +15,8 @@ const ContactUs = () => {
     phone: '',
     careerPath: '',
     message: '',
-    workExperience: ''
+    workExperience: '',
+    couponCode: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -46,7 +47,8 @@ const ContactUs = () => {
         phone: formData.phone,
         careerPath: formData.careerPath,
         message: formData.message,
-        workExperience: formData.workExperience
+        workExperience: formData.workExperience,
+        couponCode: formData.couponCode
       }),
     });
 
@@ -58,10 +60,11 @@ const ContactUs = () => {
         phone: '',
         careerPath: '',
         message: '',
-        workExperience: ''
+        workExperience: '',
+        couponCode:''
       });
     } else {
-      alert('Something went wrong. You can send us an email directly or reach out through WhatsApp');
+      alert('We have already received 500 queries today. You can reach out through WhatsApp');
     }
   };
 
@@ -185,6 +188,20 @@ const ContactUs = () => {
                 ))}
               </select>
             </div>
+            <div className="mb-4">
+              <label htmlFor="couponCode" className="block text-gray-700 text-sm font-bold mb-2">
+              Coupon Code
+              </label>
+              <input
+                type="text"
+                id="couponCode"
+                name="couponCode"
+                value={formData.couponCode}
+                onChange={handleChange}                
+                placeholder="Coupon Code if you have"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600"
+              />
+            </div>
 
             <div className="mb-4">
               <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
@@ -194,8 +211,7 @@ const ContactUs = () => {
                 id="message"
                 name="message"
                 value={formData.message}
-                onChange={handleChange}
-                required
+                onChange={handleChange}                
                 placeholder="Your Query or Message! (like if you are in different timezone in Australia/US or have prefered call back time)"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 h-32 resize-none"
               ></textarea>
@@ -247,8 +263,9 @@ const ContactUs = () => {
   
   {/* WhatsApp Link */}
   <h2 className="text-white text-2xl font-semibold mb-6">Prefer WhatsApp?</h2>
+  <h3 className="text-white text-l font-semibold mb-6">Reach us at +91 70256 07274</h3>
   <Link 
-    aria-label="Chat on WhatsApp" 
+    aria-label="Chat on WhatsApp at +91 70256 07274" 
     href="https://wa.me/917025607274?text=I'm%20interested%20in%20Gen%20AI%20career%20path"
     className="mb-8"
   >
