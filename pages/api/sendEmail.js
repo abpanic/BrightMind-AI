@@ -2,7 +2,8 @@ import Mailjet from 'node-mailjet';
 import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase client
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
+
+export const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
 const mailjet = new Mailjet({
   apiKey: process.env.MJ_APIKEY_PUBLIC,
@@ -11,9 +12,13 @@ const mailjet = new Mailjet({
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name, email, phone, careerPath, message, workExperience } = req.body;
+    const { name, email, phone, careerPath, message, couponCode, workExperience } = req.body;
+
+    let emailSuccess = false;
+    let supabaseSuccess = false;
 
     try {
+      // Send Email via Mailjet
       const request = mailjet
         .post('send', { version: 'v3.1' })
         .request({
@@ -37,6 +42,7 @@ export default async function handler(req, res) {
                 - Phone: ${phone}
                 - Career Path: ${careerPath}
                 - Work Experience: ${workExperience}
+                - Coupon Code: ${couponCode}
                 - Message: ${message}
               `,
               HTMLPart: `
@@ -46,6 +52,7 @@ export default async function handler(req, res) {
                   <li><strong>Email:</strong> ${email}</li>
                   <li><strong>Phone:</strong> ${phone}</li>
                   <li><strong>Career Path:</strong> ${careerPath}</li>
+                  <li><strong>Coupon Code:</strong> ${couponCode}</li>
                   <li><strong>Work Experience:</strong> ${workExperience}</li>
                   <li><strong>Message:</strong> ${message}</li>
                 </ul>
@@ -54,24 +61,38 @@ export default async function handler(req, res) {
           ],
         });
 
-        const result = await request;
-
-        // Write contact form data to Supabase
-        const { data, error } = await supabase
-          .from('contact_forms')
-          .insert([{ name, email, phone, career_path: careerPath, message, work_experience: workExperience }]);
-  
-        if (error) {
-          throw new Error('Error saving data to Supabase: ' + error.message);
-        }
-  
-        res.status(200).json({ success: true, result: result.body, supabaseData: data });
-      } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, error: 'Failed to process request' });
-      }
-    } else {
-      res.setHeader('Allow', ['POST']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      await request;
+      emailSuccess = true;
+    } catch (error) {
+      console.error('Failed to send email: ', error);
     }
+
+    try {
+      // Write contact form data to Supabase
+      const { data, error } = await supabase
+        .from('contact_forms')
+        .insert([{ 
+          name, 
+          email, 
+          phone, 
+          career_path: careerPath, 
+          couponCode, 
+          message, 
+          work_experience: workExperience 
+        }]);
+
+      if (error) {
+        throw new Error('Error saving data to Supabase: ' + error.message);
+      }
+      supabaseSuccess = true;
+    } catch (error) {
+      console.error('Failed to save to Supabase: ', error);
+    }
+
+    // Return success status for both email and supabase actions
+    res.status(200).json({ emailSuccess, supabaseSuccess });
+  } else {
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
+}
