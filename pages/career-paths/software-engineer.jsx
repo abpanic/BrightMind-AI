@@ -138,7 +138,7 @@ export default function SoftwareEngineerI() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Completion Timeline</h2>
-            <p className="text-lg text-gray-800">The expected completion timeline for this program is 9 months.</p>
+            <p className="text-lg text-gray-800">The expected completion timeline for this Career Path is 9 months.</p>
           </motion.div>
         );
       case 'path':
@@ -174,7 +174,7 @@ export default function SoftwareEngineerI() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Price</h2>
-            <p className="text-lg text-gray-800">The total cost for the Software Engineer I program is $1099, with a 10% discount for early enrollment.</p>
+            <p className="text-lg text-gray-800">The total cost of the Software Engineer I Career Path is ₹50,400 which can be paid in monthly installment of ₹6,300 over 9 months.</p>
           </motion.div>
         );
       default:

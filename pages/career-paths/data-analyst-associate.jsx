@@ -113,7 +113,7 @@ export default function DataAnalystAssociate() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Completion Timeline</h2>
-            <p className="text-lg text-gray-800">The expected completion timeline for this program is 9 months.</p>
+            <p className="text-lg text-gray-800">The expected completion timeline for this Career Path is 3 months.</p>
           </motion.div>
         );
       case 'path':
@@ -144,7 +144,7 @@ export default function DataAnalystAssociate() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Price</h2>
-            <p className="text-lg text-gray-800">The total cost for the Data Analyst Associate program is $799, with a 15% discount for early enrollment.</p>
+            <p className="text-lg text-gray-800">The total cost of the Data Analyst Associate Career Path is ₹4,500, which can be paid in monthly installments of ₹1,500 over 3 months.</p>
           </motion.div>
         );
       default:

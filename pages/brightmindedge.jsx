@@ -39,7 +39,7 @@ export default function BrightMindEdge() {
               <RoughNotation type="underline" show={true} strokeWidth={2} color="red">
                 technical interviews
               </RoughNotation>, modeled after those used by leading companies in the AI and tech space. 
-              No more quizzes like in college—our program is designed to simulate the actual hiring process, preparing you to stand out in competitive job markets.
+              No more quizzes like in college—our Career Path is designed to simulate the actual hiring process, preparing you to stand out in competitive job markets.
             </p>
 
             <p className="mt-6 text-gray-600">
@@ -154,7 +154,7 @@ export default function BrightMindEdge() {
                 Our goal is to make learning accessible for everyone. While annual plans can be a great value and are reasonably pricing, we understand they might feel unaffordable upfront. That’s why we offer <span className="font-bold">affordable monthly payment plans</span> that help break down the cost, ensuring you can focus on gaining the skills you need without the financial strain.
               </p>
               <p className="mt-2 text-gray-600">
-                Plus, for honors students in select programs, we help achieve <span className="font-bold">internship opportunities</span>, providing real-world experience and helping you make the most of your education.
+                Plus, for honors students in select Career Paths, we help achieve <span className="font-bold">internship opportunities</span>, providing real-world experience and helping you make the most of your education.
               </p>
             </div>
 
@@ -163,7 +163,7 @@ export default function BrightMindEdge() {
               <FaUserTie className="text-indigo-600 text-4xl mb-4" />
               <h3 className="text-2xl font-bold text-gray-900">Industry-Focused Skill Development</h3>
               <p className="mt-2 text-gray-600">
-                Our programs are crafted to equip you with the{" "}
+                Our Career Paths are crafted to equip you with the{" "}
                 <span className="font-bold">skills that are in high demand</span>{" "}
                 across industries. Whether you aspire to become a{" "}
                 <RoughNotation type="highlight" show={true} color="yellow" padding={5}>

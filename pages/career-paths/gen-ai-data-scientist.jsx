@@ -101,7 +101,7 @@ export default function DataScientistLLM() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Price</h2>
-            <p className="text-lg text-gray-800">The total cost for the Data Scientist with LLM program is $1,299, with a 10% discount for early enrollment.</p>
+            <p className="text-lg text-gray-800">The total cost of the Data Scientist with LLM Career Path is ₹2,00,000 which can be paid in monthly installment of ₹20,00 over 18 months.</p>
           </motion.div>
         );
       default:

@@ -21,7 +21,7 @@ export default function DataEngineer() {
           {`{
             "@context": "http://schema.org",
             "@type": "Course",
-            "name": "Data Engineer Program",
+            "name": "Data Engineer Career Path",
             "description": "Become a Data Engineer by mastering skills like designing scalable data systems, managing cloud infrastructure, and optimizing data pipelines.",
             "provider": {
               "@type": "Organization",

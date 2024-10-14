@@ -31,7 +31,7 @@ export default function DataAnalyst() {
                 </li>
                 <li className="flex items-start">
                   <FaProjectDiagram className="text-green-500 mr-4" />
-                  <span>Learn how to visualize data and present findings using charts in Excel and BI tools like IBM Cognos Analytics & Tableau</span>
+                  <span>Learn how to visualize data and present findings using charts in Excel and BI tools like PowerBI & Tableau</span>
                 </li>
                 <li className="flex items-start">
                   <FaPython className="text-red-500 mr-4" />
@@ -111,7 +111,7 @@ export default function DataAnalyst() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Completion Timeline</h2>
-            <p className="text-lg text-gray-800">The expected completion timeline for this program is 6 months.</p>
+            <p className="text-lg text-gray-800">The expected completion timeline for this Career Path is 6 months.</p>
           </motion.div>
         );
       case 'path':
@@ -144,7 +144,7 @@ export default function DataAnalyst() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Price</h2>
-            <p className="text-lg text-gray-800">The total cost for the Data Analyst program is $899, with a 10% discount for early enrollment.</p>
+            <p className="text-lg text-gray-800">The total cost of the Data Analyst Career Path is ₹22,500, which can be paid in monthly installments of ₹4,500 over 6 months.</p>
           </motion.div>
         );
       default:
@@ -173,7 +173,7 @@ export default function DataAnalyst() {
     <>
       <Head>
       <title>Data Analyst | Bright-Mind AI</title>
-      <meta name="description" content="Master data analysis with Bright-Mind AI's Data Analyst program. Learn key skills like Python, statistical analysis, regression models, and machine learning." />
+      <meta name="description" content="Master data analysis with Bright-Mind AI's Data Analyst Career Path. Learn key skills like Python, statistical analysis, regression models, and machine learning." />
       <meta name="keywords" content="Data Analyst, Python, Machine Learning, Statistical Analysis, Data Visualization, Regression Models, Data Science" />
       <meta property="og:title" content="Data Analyst | Bright-Mind AI" />
       <meta property="og:description" content="Become a Data Analyst with Bright-Mind AI. Gain hands-on experience in data analysis, visualization, and machine learning." />
