@@ -7,7 +7,6 @@ import pricingPlans from '../data/pricingPlans.json';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -20,6 +19,7 @@ const ContactUs = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [errorModalVisible, setErrorModalVisible] = useState(false);
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
   const [isWhatsappAllowed, setIsWhatsappAllowed] = useState(false);
 
@@ -35,6 +35,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Send form data to the email API
     const sendGridApiEndpoint = '/api/sendEmail'; 
     const response = await fetch(sendGridApiEndpoint, {
       method: 'POST',
@@ -46,9 +47,9 @@ const ContactUs = () => {
         email: formData.email,
         phone: formData.phone,
         careerPath: formData.careerPath,
-        message: formData.message,
+        message: formData.message || '', // Optional message
         workExperience: formData.workExperience,
-        couponCode: formData.couponCode
+        couponCode: formData.couponCode || '' // Optional coupon code
       }),
     });
 
@@ -61,10 +62,10 @@ const ContactUs = () => {
         careerPath: '',
         message: '',
         workExperience: '',
-        couponCode:''
+        couponCode: ''
       });
     } else {
-      alert('We have already received 500 queries today. You can reach out through WhatsApp');
+      setErrorModalVisible(true); // Show error modal for any non-429 error
     }
   };
 
@@ -94,10 +95,31 @@ const ContactUs = () => {
             </div>
           )}
 
-          <form
-            className="bg-white p-8 rounded-lg shadow-lg w-full"
-            onSubmit={handleSubmit}
-          >
+          {/* Error Modal */}
+          {errorModalVisible && (
+            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+              <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-auto">
+                <h2 className="text-2xl font-bold text-center mb-4">Limit Reached for Today!</h2>
+                <p className="text-gray-700 text-center mb-4">
+                  We’ve reached our daily limit of 500 inquiries.
+                  Please contact us via WhatsApp for immediate assistance.
+                </p>
+                <Link href="https://wa.me/917025607274" passHref className="block bg-green-500 text-white text-center py-2 rounded-lg mb-4">
+                    Reach us on WhatsApp at +91 7025607274
+                  
+                </Link>
+                <button
+                  onClick={() => setErrorModalVisible(false)}
+                  className="bg-gradient-to-r from-indigo-800 via-purple-500 to-purple-800 text-white px-4 py-2 rounded-full focus:outline-none w-full"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Form */}
+          <form className="bg-white p-8 rounded-lg shadow-lg w-full" onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
                 Name
@@ -188,9 +210,11 @@ const ContactUs = () => {
                 ))}
               </select>
             </div>
+
+            {/* Coupon Code and Message/Query Optional Fields */}
             <div className="mb-4">
               <label htmlFor="couponCode" className="block text-gray-700 text-sm font-bold mb-2">
-              Coupon Code
+                Coupon Code
               </label>
               <input
                 type="text"
@@ -198,7 +222,7 @@ const ContactUs = () => {
                 name="couponCode"
                 value={formData.couponCode}
                 onChange={handleChange}                
-                placeholder="Coupon Code if you have"
+                placeholder="Coupon Code (if any)"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600"
               />
             </div>
@@ -212,11 +236,11 @@ const ContactUs = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}                
-                placeholder="Your Query or Message! (like if you are in different timezone in Australia/US or have prefered call back time)"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 h-32 resize-none"
+                placeholder="Your Query or Message"
+                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 h-32 resize-none"
               ></textarea>
             </div>
-              
+
             {/* Checkbox for Terms & Conditions */}
             <div className="flex items-center mb-1 text-xs">
               <input
@@ -240,7 +264,6 @@ const ContactUs = () => {
                 className="mr-1"
                 checked={isWhatsappAllowed}
                 onChange={(e) => setIsWhatsappAllowed(e.target.checked)}
-                required
               />
               <label htmlFor="whatsappConsent">
                 Call and reach out via WhatsApp
@@ -259,34 +282,34 @@ const ContactUs = () => {
         </div>
 
         {/* Contact via Email and WhatsApp */}
-<div className="flex flex-col items-center justify-center bg-transparent">
-  
-  {/* WhatsApp Link */}
-  <h2 className="text-white text-2xl font-semibold mb-6">Prefer WhatsApp?</h2>
-  <h3 className="text-white text-l font-semibold mb-6">Reach us at +91 70256 07274</h3>
-  <Link 
-    aria-label="Chat on WhatsApp at +91 70256 07274" 
-    href="https://wa.me/917025607274?text=I'm%20interested%20in%20Gen%20AI%20career%20path"
-    className="mb-8"
-  >
-    <Image 
-      alt="Chat on WhatsApp" 
-      src="/assets/WhatsAppButtonGreenSmall.png" 
-      width={200} 
-      height={150}
-      className="hover:scale-105 transition-transform duration-300 ease-in-out"
-    />
-  </Link>
+        <div className="flex flex-col items-center justify-center bg-transparent">
+          
+          {/* WhatsApp Link */}
+          <h2 className="text-white text-2xl font-semibold mb-6">Prefer WhatsApp?</h2>
+          <h3 className="text-white text-l font-semibold mb-6">Reach us at +91 70256 07274</h3>
+          <Link 
+            aria-label="Chat on WhatsApp at +91 70256 07274" 
+            href="https://wa.me/917025607274?text=I'm%20interested%20in%20Gen%20AI%20career%20path"
+            className="mb-8"
+          >
+            <Image 
+              alt="Chat on WhatsApp" 
+              src="/assets/WhatsAppButtonGreenSmall.png" 
+              width={200} 
+              height={150}
+              className="hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+          </Link>
 
-  {/* Divider for better visual separation */}
-  <div className="w-full border-t border-gray-300 my-6"></div>
+          {/* Divider for better visual separation */}
+          <div className="w-full border-t border-gray-300 my-6"></div>
 
-  {/* Email contact section */}
-  <FaEnvelope className="text-white text-4xl mb-4" />
-  <p className="text-white text-center text-lg mb-2">Prefer to reach out directly?</p>
-  <p className="text-white text-center text-lg font-bold mb-4">bright-mind-ai.counsellor@bright-mind.in</p>
-  <p className="text-white text-center text-sm">You'll hear back within 24 hours</p>
-</div>
+          {/* Email contact section */}
+          <FaEnvelope className="text-white text-4xl mb-4" />
+          <p className="text-white text-center text-lg mb-2">Prefer to reach out directly?</p>
+          <p className="text-white text-center text-lg font-bold mb-4">bright-mind-ai.counsellor@bright-mind.in</p>
+          <p className="text-white text-center text-sm">You'll hear back within 24 hours</p>
+        </div>
 
       </div>
     </div>
@@ -294,3 +317,4 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
