@@ -3,6 +3,7 @@
 #sendgrid API
 process.env
 process.*
+.env.local
 
 # dependencies
 /node_modules
