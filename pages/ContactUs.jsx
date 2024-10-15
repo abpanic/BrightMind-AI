@@ -6,9 +6,6 @@ import workExperienceOptions from '../data/workExperienceOptions.json';
 import pricingPlans from '../data/pricingPlans.json';
 import Link from 'next/link';
 import Image from 'next/image';
-import {supabase} from './api/sendEmail'
-
-
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
