@@ -232,6 +232,7 @@ export default function SoftwareEngineerI() {
           <button
             onClick={() => setActiveTab('learn')}
             className={`py-2 px-4 font-semibold rounded-lg ${activeTab === 'learn' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+            
           >
             What you'll learn
           </button>
