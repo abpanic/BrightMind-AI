@@ -1,20 +1,20 @@
 import Mailjet from 'node-mailjet';
 import { createClient } from '@supabase/supabase-js';
 
-# Mailjet API Keys
-MJ_APIKEY_PUBLIC=d5d3f2980d2add4f38836c69450462f3
-MJ_APIKEY_PRIVATE=87cbb3fafd1faf45a69bece6592d039b
 
-# Supabase Configuration
+MJ_APIKEY_PUBLIC='d5d3f2980d2add4f38836c69450462f3'
+MJ_APIKEY_PRIVATE='87cbb3fafd1faf45a69bece6592d039b'
+
+
 NEXT_PUBLIC_SUPABASE_URL='https://sobhmltowefsfutqwncb.supabase.co'
 NEXT_PUBLIC_SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvYmhtbHRvd2Vmc2Z1dHF3bmNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg1MDQ1NjcsImV4cCI6MjA0NDA4MDU2N30.DQoVOdEWn9UX0FH8Ye1BFS0ofCNQOv19yPYqjHP1QE8'
 
 // Initialize Supabase client
-export const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+export const supabase = createClient(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
 const mailjet = new Mailjet({
-  apiKey: process.env.MJ_APIKEY_PUBLIC,
-  apiSecret: process.env.MJ_APIKEY_PRIVATE,
+  apiKey: MJ_APIKEY_PUBLIC,
+  apiSecret: MJ_APIKEY_PRIVATE,
 });
 
 export default async function handler(req, res) {
