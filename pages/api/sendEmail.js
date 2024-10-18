@@ -25,7 +25,7 @@ export default async function handler(req, res) {
               To: [
                 {
                   Email: 'abhilash.panicker@outlook.com', // Your email where you want to receive the form data
-                  Name: 'Bright Mind AI Counsellor',
+                  Name: 'Bright-Mind AI Counsellor',
                 },
               ],
               Subject: `New Contact Us Submission from ${name}`,

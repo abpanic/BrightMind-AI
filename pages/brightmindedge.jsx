@@ -1,5 +1,4 @@
 import React from "react";
-import { RoughNotation } from "react-rough-notation";
 import {
   FaChalkboardTeacher,
   FaCreditCard,
@@ -33,12 +32,12 @@ export default function BrightMindEdge() {
 
             <p className="mt-4 text-gray-600 leading-relaxed">
               Our goal is not just to teach you the theory but to ensure you’re{" "}
-              <RoughNotation type="underline" show={true} strokeWidth={2} color="indigo">
+              <span className="underline text-indigo-600 font-semibold">
                 fully prepared for real-world industry challenges
-              </RoughNotation>. That’s why we focus on{" "}
-              <RoughNotation type="underline" show={true} strokeWidth={2} color="red">
+              </span>. That’s why we focus on{" "}
+              <span className="underline text-red-600 font-semibold">
                 technical interviews
-              </RoughNotation>, modeled after those used by leading companies in the AI and tech space. 
+              </span>, modeled after those used by leading companies in the AI and tech space. 
               No more quizzes like in college—our Career Path is designed to simulate the actual hiring process, preparing you to stand out in competitive job markets.
             </p>
 
@@ -94,9 +93,9 @@ export default function BrightMindEdge() {
 
             <p className="mt-8 text-gray-600">
               These exclusive services are available to candidates who{" "}
-              <RoughNotation type="underline" show={true} strokeWidth={2} color="teal">
+              <span className="underline text-teal-600 font-semibold">
                 commit to and complete the entire career path
-              </RoughNotation>, ensuring that you not only gain technical expertise but are also fully prepared to navigate the job search process with confidence.
+              </span>, ensuring that you not only gain technical expertise but are also fully prepared to navigate the job search process with confidence.
             </p>
           </div>
 
@@ -116,31 +115,28 @@ export default function BrightMindEdge() {
                 {/* Deakin University */}
                 <div className="mb-6">
                   <p className="text-gray-600 text-lg">
-                    <RoughNotation type="underline" show={true} strokeWidth={3} color="purple">
-                      <span className="font-bold text-purple-600">Deakin University</span>
-                    </RoughNotation>
-                    , one of the top universities in Australia, is globally recognized for its cutting-edge research in AI and technology. Our alumni trained at Deakin bring that world-class knowledge into every lesson, ensuring you’re learning from the very best.
+                    <span className="font-bold text-purple-600 underline">
+                      Deakin University
+                    </span>, one of the top universities in Australia, is globally recognized for its cutting-edge research in AI and technology. Our alumni trained at Deakin bring that world-class knowledge into every lesson, ensuring you’re learning from the very best.
                   </p>
                 </div>
 
                 {/* IIT Alumni */}
                 <div className="mb-6">
                   <p className="text-gray-600 text-lg">
-                    <RoughNotation type="underline" show={true} strokeWidth={3} color="orange">
-                      <span className="font-bold text-orange-600">IIT alumni</span>
-                    </RoughNotation>
-                    bring their unparalleled expertise from India’s premier technology institutions, known for producing some of the brightest minds in engineering and data science. Their experience in both academia and industry provides you with a unique, practical learning experience.
+                    <span className="font-bold text-orange-600 underline">
+                      IIT alumni
+                    </span> bring their unparalleled expertise from India’s premier technology institutions, known for producing some of the brightest minds in engineering and data science. Their experience in both academia and industry provides you with a unique, practical learning experience.
                   </p>
                 </div>
 
                 {/* Texas McCombs */}
                 <div className="mb-6">
                   <p className="text-gray-600 text-lg">
-                    Trained at 
-                    <RoughNotation type="underline" show={true} strokeWidth={3} color="blue">
-                      <span className="font-bold text-blue-600"> Texas McCombs</span>
-                    </RoughNotation>
-                    , one of the leading business schools in the U.S., our alumni have a strong foundation in data-driven decision-making and AI applications in business. This provides you with a strategic edge, blending technical expertise with business insights.
+                    Trained at{" "}
+                    <span className="font-bold text-blue-600 underline">
+                      Texas McCombs
+                    </span>, one of the leading business schools in the U.S., our alumni have a strong foundation in data-driven decision-making and AI applications in business. This provides you with a strategic edge, blending technical expertise with business insights.
                   </p>
                 </div>
               </div>
@@ -151,7 +147,7 @@ export default function BrightMindEdge() {
               <FaCreditCard className="text-indigo-600 text-4xl mb-4" />
               <h3 className="text-2xl font-bold text-gray-900">Pocket-Friendly Payment Options</h3>
               <p className="mt-2 text-gray-600">
-                Our goal is to make learning accessible for everyone. While annual plans can be a great value and are reasonably pricing, we understand they might feel unaffordable upfront. That’s why we offer <span className="font-bold">affordable monthly payment plans</span> that help break down the cost, ensuring you can focus on gaining the skills you need without the financial strain.
+                Our goal is to make learning accessible for everyone. While annual plans can be a great value and are reasonably priced, we understand they might feel unaffordable upfront. That’s why we offer <span className="font-bold">affordable monthly payment plans</span> that help break down the cost, ensuring you can focus on gaining the skills you need without the financial strain.
               </p>
               <p className="mt-2 text-gray-600">
                 Plus, for honors students in select Career Paths, we help achieve <span className="font-bold">internship opportunities</span>, providing real-world experience and helping you make the most of your education.
@@ -166,25 +162,13 @@ export default function BrightMindEdge() {
                 Our Career Paths are crafted to equip you with the{" "}
                 <span className="font-bold">skills that are in high demand</span>{" "}
                 across industries. Whether you aspire to become a{" "}
-                <RoughNotation type="highlight" show={true} color="yellow" padding={5}>
-                  software engineer
-                </RoughNotation>,{" "}
-                <RoughNotation type="highlight" show={true} color="lightgreen" padding={5}>
-                  data engineer
-                </RoughNotation>,{" "}
-                <RoughNotation type="highlight" show={true} color="lightblue" padding={5}>
-                  data analyst
-                </RoughNotation>, or specialize in{" "}
-                <RoughNotation type="highlight" show={true} color="lightcoral" padding={5}>
-                  machine learning
-                </RoughNotation>,{" "}
-                <RoughNotation type="highlight" show={true} color="lightpurple" padding={5}>
-                  Gen AI
-                </RoughNotation>,{" "}
-                  cloud computing, or{" "}
-                <RoughNotation type="highlight" show={true} color="lightblue" padding={5}>
-                  blockchain
-                </RoughNotation>, we prepare you to{" "}
+                <span className="font-bold text-yellow-600">software engineer</span>,{" "}
+                <span className="font-bold text-green-600">data engineer</span>,{" "}
+                <span className="font-bold text-blue-600">data analyst</span>, or specialize in{" "}
+                <span className="font-bold text-red-600">machine learning</span>,{" "}
+                <span className="font-bold text-purple-600">Gen AI</span>,{" "}
+                cloud computing, or{" "}
+                <span className="font-bold text-blue-600">blockchain</span>, we prepare you to{" "}
                 <span className="font-bold">hit the ground running</span> and{" "}
                 <span className="font-bold">create value from Day 1</span>.
               </p>
@@ -198,37 +182,33 @@ export default function BrightMindEdge() {
             </div>
           </div>
 
-{/* Certificate Section */}
-<div className="flex flex-col justify-between p-4 bg-white rounded-lg shadow-lg">
-  <div className="flex items-center mb-4">
-    <FaCertificate className="text-indigo-600 text-4xl mr-4" />
-    <h3 className="text-2xl font-bold text-gray-900">Industry-Recognized Certificates</h3>
-  </div>
-  <p className="mt-2 text-gray-600">
-    Upon completion, you will receive verifiable certificates recognized by top industries.
-    You can easily add them to your LinkedIn profile. Each certificate comes with a{" "}
-    <span className="font-bold">unique ID</span> for verification, ensuring your accomplishments are easily recognized.
-  </p>
-  <p className="mt-2 text-gray-600">
-    These certificates showcase your newly acquired skills in Gen AI, Machine Learning, and other cutting-edge technologies, making you stand out to potential employers.
-  </p>
-  
-  {/* Image Section */}
-  <div className="relative w-full h-auto mt-4"> {/* Full-width, auto-height */}
-    <Image
-      src="/assets/cert-img.jpg"
-      alt="Industry Certificate"
-      width={800}  // Adjust width to fit within container
-      height={500} // Maintain natural aspect ratio
-      objectFit="contain"  // Ensure the image scales properly without being cut
-      className="rounded-lg shadow-lg"
-    />
-  </div>
-</div>
-
-
-
-
+          {/* Certificate Section */}
+            <div className="flex flex-col justify-between p-4 bg-white rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <FaCertificate className="text-indigo-600 text-4xl mr-4" />
+                <h3 className="text-2xl font-bold text-gray-900">Industry-Recognized Certificates</h3>
+              </div>
+              <p className="mt-2 text-gray-600">
+                Upon completion, you will receive verifiable certificates recognized by top industries.
+                You can easily add them to your LinkedIn profile. Each certificate comes with a{" "}
+                <span className="font-bold">unique ID</span> for verification, ensuring your accomplishments are easily recognized.
+              </p>
+              <p className="mt-2 text-gray-600">
+                These certificates showcase your newly acquired skills in Gen AI, Machine Learning, and other cutting-edge technologies, making you stand out to potential employers.
+              </p>
+              
+              {/* Image Section with Box */}
+              <div className="relative w-full h-auto mt-4 border-4 border-gray-300 rounded-lg shadow-lg p-2">
+                <Image
+                  src="/assets/cert-img.jpg"
+                  alt="Industry Certificate"
+                  width={800}  // Adjust width to fit within container
+                  height={500} // Maintain natural aspect ratio
+                  objectFit="contain"  // Ensure the image scales properly without being cut
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
         </div>
       </div>
     </div>

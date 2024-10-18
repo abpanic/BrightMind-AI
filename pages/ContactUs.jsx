@@ -296,7 +296,7 @@ const ContactUs = () => {
         <div className="flex flex-col items-center justify-center bg-transparent">
           
           {/* WhatsApp Link */}
-          <h2 className="text-white text-2xl font-semibold mb-6">Prefer WhatsApp?</h2>
+          <h2 className="text-white text-2xl font-semibold mb-6">We are also on WhatsApp</h2>
           <h3 className="text-white text-l font-semibold mb-6">Reach us at +91 70256 07274</h3>
           <Link 
             aria-label="Chat on WhatsApp at +91 70256 07274" 
