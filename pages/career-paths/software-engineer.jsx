@@ -220,7 +220,7 @@ export default function SoftwareEngineerI() {
       </Head>
 
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl mt-8 text-center bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold">Software Engineer I Career Path</h1>
+        <h1 className="text-4xl mt-8 text-center bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold">Software Engineer Career Path</h1>
 
         {/* Intro Section */}
         <p className="mt-4 bg-transparent rounded-lg text-lg text-center text-white max-w-4xl mx-auto">
