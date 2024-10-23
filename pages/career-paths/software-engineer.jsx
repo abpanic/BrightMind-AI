@@ -202,7 +202,7 @@ export default function SoftwareEngineerI() {
   return (
     <>
       <Head>
-        <title>Software Engineer I | Bright-Mind AI</title>
+        <title>Software Engineer | Bright-Mind AI</title>
         <meta name="description" content="Master the fundamentals of software engineering, including data structures, algorithms, and system design. Enroll today to build a solid foundation for your software engineering career." />
         <meta name="keywords" content="software engineering, system design, algorithms, data structures, backend development, software engineer career path" />
         
