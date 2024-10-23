@@ -1,20 +1,5 @@
 [
   {
-    "title": "Associate Data Analyst",
-    "price": 4500,
-    "image": "/assets/DataAnalyst.png",
-    "alt": "Data Analyst",
-    "duration": "3 months",
-    "intro": "Begin your journey in data analytics by learning the fundamental skills needed to collect, analyze, and interpret data to support business decisions.",
-    "ifYouLike": "working with data, generating reports, and discovering patterns",
-    "learnMoreLink": "/career-paths/data-analyst-associate",
-    "careerTitles": [
-      "Junior Business Analyst",
-      "Junior Data Analyst"
-    ],
-    "EMI": 1500
-  },
-  {
     "title": "Data Analyst with Python & SQL",
     "price": 22500,
     "image": "/assets/DataAnalyst.jpg",
@@ -60,7 +45,7 @@
     "EMI": 20000
   },
   {
-    "title": "Software Engineer I",
+    "title": "Software Engineer",
     "price": 50400,
     "image": "/assets/SoftwareEngineer.jpg",
     "alt": "Software Engineer",
