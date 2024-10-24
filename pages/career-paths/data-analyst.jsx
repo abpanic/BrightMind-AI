@@ -144,7 +144,7 @@ export default function DataAnalyst() {
             className="bg-gradient-to-r from-white to-indigo-100 rounded-lg p-8 shadow-lg"
           >
             <h2 className="text-3xl font-bold text-indigo-500 text-center mb-6">Price</h2>
-            <p className="text-lg text-gray-800">The total cost of the Data Analyst Career Path is ₹22,500, which can be paid in monthly installments of ₹4,500 over 6 months.</p>
+            <p className="text-lg text-gray-800">The total cost of the Data Analyst Career Path is ₹9,000, which can be paid in monthly installments of ₹2,000 over 6 months.</p>
           </motion.div>
         );
       default:
