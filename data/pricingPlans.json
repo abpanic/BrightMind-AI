@@ -1,7 +1,7 @@
 [
   {
     "title": "Data Analyst with Python & SQL",
-    "price": 22500,
+    "price": 9000,
     "image": "/assets/DataAnalyst.jpg",
     "alt": "Data Analyst",
     "duration": "6 months",
@@ -12,7 +12,7 @@
       "Data Analyst",
       "Business Analyst"
     ],
-    "EMI": 4500
+    "EMI": 2000
   },
   {
     "title": "Machine Learning Engineer",
