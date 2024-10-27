@@ -7,9 +7,10 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Bright-Mind AI - Empowering Education in Deep Tech</title>        
-        <meta name="description" content="Bright-Mind AI offers cutting-edge AI education with hands-on projects and live mentorship to help you advance your career." />
+        <title>Bright-Mind AI - Become Deep Tech Expert</title>        
+        <meta name="description" content="Learn the in-demand skills to advance your career in AI, ML, data science, digital marketing, cloud, software engg & more. Get the latest data science, machine learning, and AI courses, news, blogs, tutorials, and resources." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="online education, online courses, online professional courses, bright-mind, bright-min ai, online tech courses, online learning, online higher education, e-learning, learn online, great learning course, learn online, career courses, online certifications, online training and certifications, study online, online career, machine learning, artificial intelligence, blockchain, finTech, automation, earn,  online Training Courses, online learning, online classes, online certification courses, online education, learn  ai"/>
 
         {/* Favicon and Icons */}
         <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
@@ -19,7 +20,7 @@ const Home = () => {
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Open Graph Tags for Social Sharing */}
-        <meta property="og:title" content="Bright-Mind AI - Empowering Education in Deep Tech" />
+        <meta property="og:title" content="Bright-Mind AI - Become Deep Tech Expert" />
         <meta property="og:description" content="Bright-Mind AI offers cutting-edge AI education with hands-on projects and live mentorship." />
         <meta property="og:image" content="/assets/images/og-image.png" />
         <meta property="og:url" content="https://www.bright-mind.in" />
@@ -27,7 +28,7 @@ const Home = () => {
         
         {/* Twitter Card Tags for Social Sharing */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bright-Mind AI - Empowering Education in Deep Tech" />
+        <meta name="twitter:title" content="Bright-Mind AI - Become Deep Tech Expert" />
         <meta name="twitter:description" content="Advance your career with hands-on AI projects and expert mentorship." />
         <meta name="twitter:image" content="/assets/images/twitter-card.png" />
 
