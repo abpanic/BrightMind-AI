@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Head>
         <title>Bright-Mind AI - Become Deep Tech Expert</title>        
-        <meta name="description" content="Learn the in-demand skills to advance your career in AI, ML, data science, digital marketing, cloud, software engg & more. Get the latest data science, machine learning, and AI courses, news, blogs, tutorials, and resources." />
+        <meta name="description" content="Advance your career in AI, ML, data science, cloud, software engineering & more. Get the latest courses, news, blogs, tutorials, and resources." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="online education, online courses, online professional courses, bright-mind, bright-min ai, online tech courses, online learning, online higher education, e-learning, learn online, great learning course, learn online, career courses, online certifications, online training and certifications, study online, online career, machine learning, artificial intelligence, blockchain, finTech, automation, earn,  online Training Courses, online learning, online classes, online certification courses, online education, learn  ai"/>
 
