@@ -5,6 +5,9 @@ process.env
 process.*
 .env.local
 
+# contentlayer
+.contentlayer
+
 # dependencies
 /node_modules
 /.pnp
